@@ -5,37 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin học sinh</title>
     <style>
-        #student-info {
-            margin-top: 20px;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: #34495e;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        #student-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #student-info h3 {
+            color: #2980b9;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        #student-info p {
+            font-size: 16px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        #student-info p strong {
+            color: #2980b9;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Thông tin học sinh</h1>
-    <label for="student-select">Chọn học sinh:</label>
-    <select id="student-select">
-        <option value="">--Chọn học sinh--</option>
-    </select>
+    <div class="container">
+        <h1>Thông tin học sinh</h1>
+        
+        <label for="student-select">Chọn học sinh:</label>
+        <select id="student-select">
+            <option value="">--Chọn học sinh--</option>
+        </select>
 
-    <div id="student-info"></div>
+        <div class="loading" id="loading-message">Đang tải thông tin học sinh...</div>
+
+        <div id="student-info"></div>
+    </div>
 
     <script>
-        // Đọc file txt và phân tích thông tin học sinh
         const students = [];
         let currentStudent = {};
         let isProcessingStudent = false;
 
-        // Function để tải và phân tích nội dung file
         function loadFile() {
-            const file = 'data.txt'; // Tên file txt chứa dữ liệu học sinh
+            const file = 'data.txt'; // Đảm bảo rằng file txt chứa dữ liệu học sinh
             fetch(file)
                 .then(response => response.text())
                 .then(data => {
                     const lines = data.split('\n');
                     lines.forEach(line => {
-                        // Kiểm tra các số thứ tự từ 1 đến 45
                         if (/^\d{1,2}\./.test(line)) {
-                            // Lưu thông tin học sinh cũ nếu có
                             if (currentStudent.name) {
                                 students.push(currentStudent);
                             }
@@ -58,20 +134,20 @@
                         }
                     });
 
-                    // Đảm bảo thêm học sinh cuối cùng
                     if (currentStudent.name) {
                         students.push(currentStudent);
                     }
 
-                    // Cập nhật danh sách chọn học sinh
                     updateStudentSelect();
                 })
                 .catch(error => console.error('Lỗi khi tải file:', error));
         }
 
-        // Hàm cập nhật danh sách học sinh vào select
         function updateStudentSelect() {
             const select = document.getElementById('student-select');
+            const loadingMessage = document.getElementById('loading-message');
+            loadingMessage.style.display = 'none'; // Ẩn thông điệp tải khi đã có dữ liệu
+
             students.forEach((student, index) => {
                 const option = document.createElement('option');
                 option.value = index;
@@ -80,37 +156,31 @@
             });
         }
 
-        // Hàm hiển thị thông tin học sinh khi chọn
-        function showStudentInfo() {
-            const selectedName = document.getElementById('student-select').value;
-            const tableBody = document.getElementById('student-table').querySelector('tbody');
-            tableBody.innerHTML = ''; // Xóa dữ liệu cũ
-
-            if (selectedName) {
-                const student = students.find(s => s.name === selectedName);
-                if (student) {
-                    const row = `
-                        <tr>
-                            <td>${student.name}</td>
-                            <td>${student.studentId}</td>
-                            <td>${student.birthDate}</td>
-                            <td>${student.address}</td>
-                            <td>${student.phone}</td>
-                        </tr>
-                    `;
-                    tableBody.innerHTML += row;
-                }
+        function displayStudentInfo(index) {
+            const student = students[index];
+            const infoDiv = document.getElementById('student-info');
+            if (student) {
+                infoDiv.innerHTML = `
+                    <h3>Thông tin học sinh: ${student.name}</h3>
+                    <p><strong>Mã học sinh:</strong> ${student.studentId}</p>
+                    <p><strong>Số định danh cá nhân:</strong> ${student.idNumber}</p>
+                    <p><strong>Ngày sinh:</strong> ${student.dob}</p>
+                    <p><strong>Giới tính:</strong> ${student.gender}</p>
+                    <p><strong>Chỗ ở hiện nay:</strong> ${student.address}</p>
+                    <p><strong>Số Điện Thoại:</strong> ${student.phone}</p>
+                `;
+                infoDiv.style.display = 'block'; // Hiển thị thông tin học sinh khi chọn
+            } else {
+                infoDiv.style.display = 'none';
             }
         }
+
         document.getElementById('student-select').addEventListener('change', function () {
             const selectedIndex = this.value;
             displayStudentInfo(selectedIndex);
         });
 
-        // Tải file txt khi trang web được tải
-        loadFile();
-        // Tải dữ liệu khi trang được load
-        window.onload = loadData;
+        loadFile(); // Tải file khi trang web được tải
     </script>
 </body>
 </html>
