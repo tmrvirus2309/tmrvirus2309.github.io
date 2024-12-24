@@ -223,6 +223,18 @@
                                 currentStudent.fatherOccupation = line.split(': ')[1];
                             } else if (line.startsWith('Năm sinh cha:')) {
                                 currentStudent.fatherBirthYear = line.split(': ')[1];
+                            } else if (line.startsWith('Tên mẹ:')) {
+                                currentStudent.motherName = line.split(': ')[1];
+                            } else if (line.startsWith('Nghề nghiệp mẹ:')) {
+                                currentStudent.motherOccupation = line.split(': ')[1];
+                            } else if (line.startsWith('Năm sinh mẹ:')) {
+                                currentStudent.motherBirthYear = line.split(': ')[1];
+                            } else if (line.startsWith('Số Điện Thoại:')) {
+                                currentStudent.phone = line.split(': ')[1];
+                            } else if (line.startsWith('Điện thoại bố:')) {
+                                currentStudent.fatherPhone = line.split(': ')[1];
+                            } else if (line.startsWith('Điện thoại mẹ:')) {
+                                currentStudent.motherPhone = line.split(': ')[1];
                             }
                         }
                     });
@@ -259,28 +271,34 @@
         function displayStudentInfo(student) {
             const studentInfoDiv = document.getElementById('student-info');
             studentInfoDiv.innerHTML = `
-                <h3>Thông tin học sinh</h3>
-                <p><strong>Mã học sinh:</strong> ${student.studentId}</p>
-                <p><strong>Số định danh cá nhân:</strong> ${student.idNumber}</p>
-                <p><strong>Ngày sinh:</strong> ${student.dob}</p>
-                <p><strong>Giới tính:</strong> ${student.gender}</p>
-                <p><strong>Chỗ ở hiện nay:</strong> ${student.address}</p>
-                <p><strong>Nơi sinh:</strong> ${student.birthPlace}</p>
-                <p><strong>Quê quán:</strong> ${student.hometown}</p>
-                <p><strong>Ngày cấp CMT:</strong> ${student.idIssueDate}</p>
-                <p><strong>Nơi cấp CMT:</strong> ${student.idIssuePlace}</p>
-                <p><strong>Dân tộc:</strong> ${student.ethnicity}</p>
-                <p><strong>Tôn giáo:</strong> ${student.religion}</p>
-                <p><strong>Diện Khuyết tật:</strong> ${student.disability}</p>
-                <p><strong>Diện ưu tiên:</strong> ${student.priorityStatus}</p>
-                <p><strong>Diện ưu đãi:</strong> ${student.discountStatus}</p>
-                <p><strong>Cận nghèo:</strong> ${student.poorStatus}</p>
-                <p><strong>Đoàn viên:</strong> ${student.youthUnionMember}</p>
-                <p><strong>Đội viên:</strong> ${student.teamMember}</p>
-                <p><strong>Con giáo viên:</strong> ${student.isTeacherChild}</p>
-                <p><strong>Tên cha:</strong> ${student.fatherName}</p>
-                <p><strong>Nghề nghiệp cha:</strong> ${student.fatherOccupation}</p>
-                <p><strong>Năm sinh cha:</strong> ${student.fatherBirthYear}</p>
+                <h3>Thông tin học sinh: ${currentStudent.name}</h3>
+                    <p><strong>Mã học sinh:</strong> ${currentStudent.studentId}</p>
+                    <p><strong>Số định danh cá nhân:</strong> ${currentStudent.idNumber}</p>
+                    <p><strong>Ngày sinh:</strong> ${currentStudent.dob}</p>
+                    <p><strong>Giới tính:</strong> ${currentStudent.gender}</p>
+                    <p><strong>Chỗ ở hiện nay:</strong> ${currentStudent.address}</p>
+                    <p><strong>Nơi sinh:</strong> ${currentStudent.birthPlace}</p>
+                    <p><strong>Quê quán:</strong> ${currentStudent.hometown}</p>
+                    <p><strong>Ngày cấp CMT:</strong> ${currentStudent.idIssueDate}</p>
+                    <p><strong>Nơi cấp CMT:</strong> ${currentStudent.idIssuePlace}</p>
+                    <p><strong>Dân tộc:</strong> ${currentStudent.ethnicity}</p>
+                    <p><strong>Tôn giáo:</strong> ${currentStudent.religion}</p>
+                    <p><strong>Diện Khuyết tật:</strong> ${currentStudent.disability}</p>
+                    <p><strong>Diện ưu tiên:</strong> ${currentStudent.priorityStatus}</p>
+                    <p><strong>Diện ưu đãi:</strong> ${currentStudent.discountStatus}</p>
+                    <p><strong>Cận nghèo:</strong> ${currentStudent.poorStatus}</p>
+                    <p><strong>Đoàn viên:</strong> ${currentStudent.youthUnionMember}</p>
+                    <p><strong>Đội viên:</strong> ${currentStudent.teamMember}</p>
+                    <p><strong>Con giáo viên:</strong> ${currentStudent.isTeacherChild}</p>
+                    <p><strong>Tên cha:</strong> ${currentStudent.fatherName}</p>
+                    <p><strong>Nghề nghiệp cha:</strong> ${currentStudent.fatherOccupation}</p>
+                    <p><strong>Năm sinh cha:</strong> ${currentStudent.fatherBirthYear}</p>
+                    <p><strong>Tên mẹ:</strong> ${currentStudent.motherName}</p>
+                    <p><strong>Nghề nghiệp mẹ:</strong> ${currentStudent.motherOccupation}</p>
+                    <p><strong>Năm sinh mẹ:</strong> ${currentStudent.motherBirthYear}</p>
+                    <p><strong>Số Điện Thoại:</strong> ${currentStudent.phone}</p>
+                    <p><strong>Điện thoại bố:</strong> ${currentStudent.fatherPhone}</p>
+                    <p><strong>Điện thoại mẹ:</strong> ${currentStudent.motherPhone}</p>
             `;
             studentInfoDiv.style.display = 'block';
         }
