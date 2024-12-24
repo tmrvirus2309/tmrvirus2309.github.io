@@ -179,13 +179,15 @@
         let currentStudent = {};
         let isProcessingStudent = false;
 
+        // Function để tải và phân tích nội dung file
         function loadFile() {
-            const file = 'data.txt'; // Đảm bảo rằng file txt chứa dữ liệu học sinh
+            const file = 'students.txt'; // Tên file txt chứa dữ liệu học sinh
             fetch(file)
                 .then(response => response.text())
                 .then(data => {
                     const lines = data.split('\n');
                     lines.forEach(line => {
+                        // Kiểm tra các số thứ tự từ 1 đến 45
                         if (/^\d{1,2}\./.test(line)) {
                             if (currentStudent.name) {
                                 students.push(currentStudent);
@@ -255,6 +257,7 @@
                         students.push(currentStudent);
                     }
 
+                    // Cập nhật danh sách chọn học sinh
                     updateStudentSelect();
                 })
                 .catch(error => console.error('Lỗi khi tải file:', error));
@@ -262,9 +265,6 @@
 
         function updateStudentSelect() {
             const select = document.getElementById('student-select');
-            const loadingMessage = document.getElementById('loading-message');
-            loadingMessage.style.display = 'none'; // Ẩn thông điệp tải khi đã có dữ liệu
-
             students.forEach((student, index) => {
                 const option = document.createElement('option');
                 option.value = index;
@@ -273,6 +273,7 @@
             });
         }
 
+        // Hàm hiển thị thông tin học sinh khi chọn
         function displayStudentInfo(index) {
             const student = students[index];
             const infoDiv = document.getElementById('student-info');
