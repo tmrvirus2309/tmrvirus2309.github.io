@@ -54,7 +54,7 @@
 
         // Hàm tải và xử lý dữ liệu từ tệp
         function loadData() {
-            fetch('data.txt')
+            fetch('data.txt')  // Đảm bảo rằng tệp .txt ở cùng thư mục hoặc đường dẫn chính xác
                 .then(response => response.text())
                 .then(data => {
                     const lines = data.split('\n');
@@ -62,21 +62,42 @@
                     students = [];
                     selectElement.innerHTML = '<option value="">-- Chọn tên --</option>'; // Xóa các tùy chọn cũ
 
+                    let currentStudent = {};
+                    let isProcessingStudent = false;
+
                     // Duyệt qua dữ liệu và thêm tên học sinh vào dropdown
                     for (let i = 0; i < lines.length; i++) {
                         const line = lines[i].trim();
-                        if (line.startsWith('1.')) { // Dòng bắt đầu với số thứ tự
-                            const name = line.split('. ')[1];
-                            students.push({
-                                name: name,
-                                index: i
-                            });
-                            const option = document.createElement('option');
-                            option.value = name;
-                            option.textContent = name;
-                            selectElement.appendChild(option);
+                        if (line.startsWith('1.')) { // Dòng bắt đầu với số thứ tự (ví dụ: 1. Lại Quế Anh)
+                            if (currentStudent.name) {
+                                students.push(currentStudent);
+                            }
+                            currentStudent = { name: line.split('. ')[1] };
+                            isProcessingStudent = true;
+                        } else if (isProcessingStudent) {
+                            // Trích xuất thông tin cho mỗi học sinh
+                            if (line.startsWith('Mã học sinh:')) {
+                                currentStudent.studentId = line.split(': ')[1];
+                            } else if (line.startsWith('Ngày sinh:')) {
+                                currentStudent.birthDate = line.split(': ')[1];
+                            } else if (line.startsWith('Chỗ ở hiện nay:')) {
+                                currentStudent.address = line.split(': ')[1];
+                            } else if (line.startsWith('Số Điện Thoại:')) {
+                                currentStudent.phone = line.split(': ')[1];
+                            }
                         }
                     }
+                    if (currentStudent.name) {  // Thêm học sinh cuối cùng
+                        students.push(currentStudent);
+                    }
+
+                    // Cập nhật danh sách tên học sinh vào dropdown
+                    students.forEach(student => {
+                        const option = document.createElement('option');
+                        option.value = student.name;
+                        option.textContent = student.name;
+                        selectElement.appendChild(option);
+                    });
                 })
                 .catch(err => console.error('Lỗi khi tải dữ liệu:', err));
         }
@@ -90,37 +111,18 @@
             if (selectedName) {
                 const student = students.find(s => s.name === selectedName);
                 if (student) {
-                    const lines = document.querySelector('pre').innerText.split('\n');
-                    const info = extractStudentInfo(lines, student.index);
                     const row = `
                         <tr>
-                            <td>${info.name}</td>
-                            <td>${info.studentId}</td>
-                            <td>${info.birthDate}</td>
-                            <td>${info.address}</td>
-                            <td>${info.phone}</td>
+                            <td>${student.name}</td>
+                            <td>${student.studentId}</td>
+                            <td>${student.birthDate}</td>
+                            <td>${student.address}</td>
+                            <td>${student.phone}</td>
                         </tr>
                     `;
                     tableBody.innerHTML += row;
                 }
             }
-        }
-
-        // Hàm trích xuất thông tin học sinh từ các dòng dữ liệu
-        function extractStudentInfo(lines, index) {
-            const name = lines[index].split('. ')[1];
-            const studentId = lines[index + 1].split(': ')[1];
-            const birthDate = lines[index + 3].split(': ')[1];
-            const address = lines[index + 6].split(': ')[1];
-            const phone = lines[index + 21].split(': ')[1]; // Điện thoại mẹ
-
-            return {
-                name: name,
-                studentId: studentId,
-                birthDate: birthDate,
-                address: address,
-                phone: phone
-            };
         }
 
         // Tải dữ liệu khi trang được load
