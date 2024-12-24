@@ -165,16 +165,6 @@
         <div id="student-info"></div>
 
     <script>
-        const audioFiles = ['1.mp3', '2.mp3'];
-        const randomIndex = Math.floor(Math.random() * audioFiles.length);
-        const randomAudioFile = audioFiles[randomIndex];
-          
-          // Thay đổi nguồn âm thanh của thẻ audio
-        document.getElementById('audioSource').src = randomAudioFile;
-          
-          // Tải lại audio để bắt đầu phát
-        document.getElementById('playAudio').load();
-  
         const students = [];
         let currentStudent = {}; // Only used for processing, not for display
         let isProcessingStudent = false;
