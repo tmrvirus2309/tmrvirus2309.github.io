@@ -26,9 +26,9 @@ Năm sinh cha: 1973
 Tên mẹ: Trần Thị Ly
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1973
-Số Điện Thoại: 386535211
-Điện thoại bố: 354882530
-Điện thoại mẹ: 366535222
+Số Điện Thoại: 0386535211
+Điện thoại bố: 0354882530
+Điện thoại mẹ: 0366535222
 
 2. Lý Ngọc Lan Anh
 Mã học sinh: 2407546507
@@ -58,9 +58,9 @@ Năm sinh cha: 1985
 Tên mẹ: Trịnh Hồng Ngọc
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1985
-Số Điện Thoại: 867018810
-Điện thoại bố: 973956946
-Điện thoại mẹ: 867171404
+Số Điện Thoại: 0867018810
+Điện thoại bố: 0973956946
+Điện thoại mẹ: 0867171404
 
 3. Nguyễn Thị Ngọc Anh
 Mã học sinh: 2407546527
@@ -90,8 +90,8 @@ Năm sinh cha: 1987
 Tên mẹ: Trần Thị Ngọc Hiền
 Nghề nghiệp mẹ: Mất
 Năm sinh mẹ: 1989
-Số Điện Thoại: 794857323
-Điện thoại bố: 378120377
+Số Điện Thoại: 0794857323
+Điện thoại bố: 0378120377
 Điện thoại mẹ: Không có
 
 4. Thạch Kim Anh
@@ -122,9 +122,9 @@ Năm sinh cha: 1983
 Tên mẹ: Lý Hồng Loan
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1984
-Số Điện Thoại: 777585232
-Điện thoại bố: 767909473
-Điện thoại mẹ: 902930576
+Số Điện Thoại: 0777585232
+Điện thoại bố: 0767909473
+Điện thoại mẹ: 0902930576
 
 5. Huỳnh Tuyết Băng
 Mã học sinh: 2407546567
@@ -154,9 +154,9 @@ Năm sinh cha: 1981
 Tên mẹ: Nguyễn Thanh Thoảng
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1982
-Số Điện Thoại: 902093959
-Điện thoại bố: 902093959
-Điện thoại mẹ: 776557272
+Số Điện Thoại: 0902093959
+Điện thoại bố: 0902093959
+Điện thoại mẹ: 0776557272
 
 6. Ông Thị Tuyết Chi
 Mã học sinh: 2407546587
@@ -186,9 +186,9 @@ Năm sinh cha: 1979
 Tên mẹ: Triệu Thị Kim Tiền
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1979
-Số Điện Thoại: 333324935
-Điện thoại bố: 396415711
-Điện thoại mẹ: 776999072
+Số Điện Thoại: 0333324935
+Điện thoại bố: 0396415711
+Điện thoại mẹ: 0776999072
 
 7. Lê Phong Dân
 Mã học sinh: 2407546607
@@ -218,8 +218,8 @@ Năm sinh cha: 1981
 Tên mẹ: Bùi Thị Nhẩn
 Nghề nghiệp mẹ: Làm mướn
 Năm sinh mẹ: 1987
-Số Điện Thoại: 369337655
-Điện thoại bố: 362888837
+Số Điện Thoại: 0369337655
+Điện thoại bố: 0362888837
 Điện thoại mẹ: Không có
 
 8. Trần Thị Hồng Diệp
@@ -250,9 +250,9 @@ Năm sinh cha: 1967
 Tên mẹ: Trần Thị Lan
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1969
-Số Điện Thoại: 945194454
-Điện thoại bố: 388923443
-Điện thoại mẹ: 961114571
+Số Điện Thoại: 0945194454
+Điện thoại bố: 0388923443
+Điện thoại mẹ: 0961114571
 
 9. Lâm Trường Duy
 Mã học sinh: 2407546647
@@ -282,9 +282,9 @@ Năm sinh cha: 1986
 Tên mẹ: Lai Thị Liên
 Nghề nghiệp mẹ: Công Nhân
 Năm sinh mẹ: 1990
-Số Điện Thoại: 815107454
-Điện thoại bố: 962133454
-Điện thoại mẹ: 373337492
+Số Điện Thoại: 0815107454
+Điện thoại bố: 0962133454
+Điện thoại mẹ: 0373337492
 
 10. Nguyễn Lâm Nhật Duy
 Mã học sinh: 2407546667
@@ -314,9 +314,9 @@ Năm sinh cha: 1976
 Tên mẹ: Lâm Thị Thuỳ Dung
 Nghề nghiệp mẹ: Giáo viên
 Năm sinh mẹ: 1979
-Số Điện Thoại: 399233039
-Điện thoại bố: 762892839
-Điện thoại mẹ: 785343039
+Số Điện Thoại: 0399233039
+Điện thoại bố: 0762892839
+Điện thoại mẹ: 0785343039
 
 11. Tăng Phước Đại
 Mã học sinh: 2407546687
@@ -346,8 +346,8 @@ Năm sinh cha: 1975
 Tên mẹ: Lâm Thị Ngọc
 Nghề nghiệp mẹ: Nội Trợ
 Năm sinh mẹ: 1981
-Số Điện Thoại: 988058934
-Điện thoại bố: 988058934
+Số Điện Thoại: 0988058934
+Điện thoại bố: 0988058934
 Điện thoại mẹ: Không có
 
 12. Phạm Tấn Đạt
@@ -378,9 +378,9 @@ Năm sinh cha: 1976
 Tên mẹ: La Thị Kiều
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1977
-Số Điện Thoại: 789209443
-Điện thoại bố: 915883183
-Điện thoại mẹ: 782128212
+Số Điện Thoại: 0789209443
+Điện thoại bố: 0915883183
+Điện thoại mẹ: 0782128212
 
 13. Mai Lan Em
 Mã học sinh: 2407546707
@@ -410,9 +410,9 @@ Năm sinh cha: 1979
 Tên mẹ: Quách Thị Giang Thanh
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1979
-Số Điện Thoại: 963952232
-Điện thoại bố: 939902291
-Điện thoại mẹ: 906393552
+Số Điện Thoại: 0963952232
+Điện thoại bố: 0939902291
+Điện thoại mẹ: 0906393552
 
 14. Huỳnh Ngọc Giao
 Mã học sinh: 2407546727
@@ -442,9 +442,9 @@ Năm sinh cha: 1986
 Tên mẹ: Trần Thị Mỹ Phương
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1985
-Số Điện Thoại: 818336601
-Điện thoại bố: 946545707
-Điện thoại mẹ: 949797708
+Số Điện Thoại: 0818336601
+Điện thoại bố: 0946545707
+Điện thoại mẹ: 0949797708
 
 15. Lưu Gia Hân
 Mã học sinh: 2407546747
@@ -474,9 +474,9 @@ Năm sinh cha: 1974
 Tên mẹ: Tạ Thị Tuyết Nga
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1978
-Số Điện Thoại: 336361421
-Điện thoại bố: 386713716
-Điện thoại mẹ: 977649009
+Số Điện Thoại: 0336361421
+Điện thoại bố: 0386713716
+Điện thoại mẹ: 0977649009
 
 16. Nguyễn Ngọc Gia Hân
 Mã học sinh: 2407546767
@@ -506,9 +506,9 @@ Năm sinh cha: 1982
 Tên mẹ: Trần Thị Mỹ Hiên
 Nghề nghiệp mẹ: Không có
 Năm sinh mẹ: 1982
-Số Điện Thoại: 379982830
-Điện thoại bố: 988708975
-Điện thoại mẹ: 389143889
+Số Điện Thoại: 0379982830
+Điện thoại bố: 0988708975
+Điện thoại mẹ: 0389143889
 
 17. Huỳnh Văn Hóa
 Mã học sinh: 2407546787
@@ -538,9 +538,9 @@ Năm sinh cha: 1975
 Tên mẹ: Đặng Thị Thu Duyên
 Nghề nghiệp mẹ: Bộ Đội
 Năm sinh mẹ: 1980
-Số Điện Thoại: 347405706
-Điện thoại bố: 385848643
-Điện thoại mẹ: 326835438
+Số Điện Thoại: 0347405706
+Điện thoại bố: 0385848643
+Điện thoại mẹ: 0326835438
 
 18. Du Lý Gia Khang
 Mã học sinh: 2407547367
@@ -570,8 +570,8 @@ Năm sinh cha: 1986
 Tên mẹ: Lý Thanh Quyên
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1986
-Số Điện Thoại: 386534553
-Điện thoại bố: 946555234
+Số Điện Thoại: 0386534553
+Điện thoại bố: 0946555234
 Điện thoại mẹ: Không có
 
 19. Lưu Vỹ Khang
@@ -602,8 +602,8 @@ Năm sinh cha: Không có
 Tên mẹ: Huỳnh Thị Bảo Châu
 Nghề nghiệp mẹ: Không có
 Năm sinh mẹ: Không có
-Số Điện Thoại: 355920927
-Điện thoại bố: 355920927
+Số Điện Thoại: 0355920927
+Điện thoại bố: 0355920927
 Điện thoại mẹ: Không có
 
 20. Nguyễn Thanh Lâm
@@ -634,9 +634,9 @@ Năm sinh cha: 1985
 Tên mẹ: Nguyễn Thị Nhàng
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1989
-Số Điện Thoại: 352752967
-Điện thoại bố: 955936267
-Điện thoại mẹ: 374529823
+Số Điện Thoại: 0352752967
+Điện thoại bố: 0955936267
+Điện thoại mẹ: 0374529823
 
 21. Trần Lâm
 Mã học sinh: 2407546847
@@ -666,8 +666,8 @@ Năm sinh cha: 1980
 Tên mẹ: Lâm Thị Thi
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1985
-Số Điện Thoại: 342975675
-Điện thoại bố: 342975675
+Số Điện Thoại: 0342975675
+Điện thoại bố: 0342975675
 Điện thoại mẹ: Không có
 
 22. Triệu Thị Ngọc Linh
@@ -698,9 +698,9 @@ Năm sinh cha: 1978
 Tên mẹ: Kim Thị Năm Phượng
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1977
-Số Điện Thoại: 776500387
-Điện thoại bố: 352455627
-Điện thoại mẹ: 333566137
+Số Điện Thoại: 0776500387
+Điện thoại bố: 0352455627
+Điện thoại mẹ: 0333566137
 
 23. Hứa Kim Lượng
 Mã học sinh: 2407546887
@@ -730,9 +730,9 @@ Năm sinh cha: 1979
 Tên mẹ: Nguyễn Ngọc Qui
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1983
-Số Điện Thoại: 389052174
-Điện thoại bố: 375709062
-Điện thoại mẹ: 358936098
+Số Điện Thoại: 0389052174
+Điện thoại bố: 0375709062
+Điện thoại mẹ: 0358936098
 
 24. Lâm Thị Mai
 Mã học sinh: 2407546907
@@ -762,8 +762,8 @@ Năm sinh cha: 1976
 Tên mẹ: Kim Thị Oanh Na
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1980
-Số Điện Thoại: 706352655
-Điện thoại bố: 706352655
+Số Điện Thoại: 0706352655
+Điện thoại bố: 0706352655
 Điện thoại mẹ: Không có
 
 25. Quách Thảo My
@@ -794,9 +794,9 @@ Năm sinh cha: 1982
 Tên mẹ: Triệu Thị Bích
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1984
-Số Điện Thoại: 346880870
-Điện thoại bố: 906903646
-Điện thoại mẹ: 706563467
+Số Điện Thoại: 0346880870
+Điện thoại bố: 0906903646
+Điện thoại mẹ: 0706563467
 
 26. Lâm Kim Ngân
 Mã học sinh: 2407546947
@@ -826,9 +826,9 @@ Năm sinh cha: 1973
 Tên mẹ: Thạch Thị Phụng
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1981
-Số Điện Thoại: 334244100
-Điện thoại bố: 978551137
-Điện thoại mẹ: 332133530
+Số Điện Thoại: 0334244100
+Điện thoại bố: 0978551137
+Điện thoại mẹ: 0332133530
 
 27. Trịnh Khưu Mỹ Nghi
 Mã học sinh: 2407546967
@@ -858,9 +858,9 @@ Năm sinh cha: 1984
 Tên mẹ: Khưu Mỹ Nhiên
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1989
-Số Điện Thoại: 847476949
-Điện thoại bố: 912187121
-Điện thoại mẹ: 333493149
+Số Điện Thoại: 0847476949
+Điện thoại bố: 0912187121
+Điện thoại mẹ: 0333493149
 
 28. Ong Thị Bảo Ngọc
 Mã học sinh: 2407546987
@@ -890,9 +890,9 @@ Năm sinh cha: 1987
 Tên mẹ: Phạm Thị Thu Hương
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1982
-Số Điện Thoại: 842527252
-Điện thoại bố: 378877736
-Điện thoại mẹ: 393856098
+Số Điện Thoại: 0842527252
+Điện thoại bố: 0378877736
+Điện thoại mẹ: 0393856098
 
 29. Phan Nguyễn Nhã Nguyên
 Mã học sinh: 2407547007
@@ -922,9 +922,9 @@ Năm sinh cha: 1986
 Tên mẹ: Nguyễn Nữ Hoài Tâm
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1990
-Số Điện Thoại: 398046031
-Điện thoại bố: 987196966
-Điện thoại mẹ: 976423715
+Số Điện Thoại: 0398046031
+Điện thoại bố: 0987196966
+Điện thoại mẹ: 0976423715
 
 30. Lâm Đặng Phượng Quyên
 Mã học sinh: 2407547027
@@ -954,8 +954,8 @@ Năm sinh cha: 1982
 Tên mẹ: Đặng Thị Quyền
 Nghề nghiệp mẹ: Làm ruộng
 Năm sinh mẹ: 1985
-Số Điện Thoại: 941723884
-Điện thoại bố: 818104909
+Số Điện Thoại: 0941723884
+Điện thoại bố: 0818104909
 Điện thoại mẹ: Không có
 
 31. Nguyễn Thị Xuân Quỳnh
@@ -986,9 +986,9 @@ Năm sinh cha: 1967
 Tên mẹ: Phạm Thị Đào
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1979
-Số Điện Thoại: 342666725
-Điện thoại bố: 913666725
-Điện thoại mẹ: 932805153
+Số Điện Thoại: 0342666725
+Điện thoại bố: 0913666725
+Điện thoại mẹ: 0932805153
 
 32. Thạch Mô Ra
 Mã học sinh: 2407547067
@@ -1018,9 +1018,9 @@ Năm sinh cha: 1986
 Tên mẹ: Lâm Thị Tha Vi
 Nghề nghiệp mẹ: Làm ruộng
 Năm sinh mẹ: 1986
-Số Điện Thoại: 392887056
-Điện thoại bố: 368819025
-Điện thoại mẹ: 352865874
+Số Điện Thoại: 0392887056
+Điện thoại bố: 0368819025
+Điện thoại mẹ: 0352865874
 
 33. Huỳnh Hoàng Tấn
 Mã học sinh: 2407547087
@@ -1050,9 +1050,9 @@ Năm sinh cha: 1984
 Tên mẹ: Trần Thị Bích Son
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1988
-Số Điện Thoại: 924785682
-Điện thoại bố: 936324422
-Điện thoại mẹ: 334576074
+Số Điện Thoại: 0924785682
+Điện thoại bố: 0936324422
+Điện thoại mẹ: 0334576074
 
 34. Nguyễn Tấn Thịnh
 Mã học sinh: 2407547107
@@ -1082,9 +1082,9 @@ Năm sinh cha: 1969
 Tên mẹ: Trịnh Thị Thu Thuỷ
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1973
-Số Điện Thoại: 984107800
-Điện thoại bố: 984470060
-Điện thoại mẹ: 969350060
+Số Điện Thoại: 0984107800
+Điện thoại bố: 0984470060
+Điện thoại mẹ: 0969350060
 
 35. Trần Thị Anh Thư
 Mã học sinh: 2407547127
@@ -1114,9 +1114,9 @@ Năm sinh cha: 1982
 Tên mẹ: Thạch Thị Kim Xuyến
 Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1988
-Số Điện Thoại: 909059513
-Điện thoại bố: 913103364
-Điện thoại mẹ: 909417014
+Số Điện Thoại: 0909059513
+Điện thoại bố: 0913103364
+Điện thoại mẹ: 0909417014
 
 36. Lâm Ngọc Hoài Thương
 Mã học sinh: 2407547147
@@ -1146,9 +1146,9 @@ Năm sinh cha: 1972
 Tên mẹ: Định Thị Hồng Nhung
 Nghề nghiệp mẹ: Làm ruộng
 Năm sinh mẹ: 1975
-Số Điện Thoại: 939399458
-Điện thoại bố: 939399458
-Điện thoại mẹ: 942264424
+Số Điện Thoại: 0939399458
+Điện thoại bố: 0939399458
+Điện thoại mẹ: 0942264424
 
 37. Nguyễn Thị Ngọc Tiến
 Mã học sinh: 2407547167
@@ -1210,9 +1210,9 @@ Năm sinh cha: 1986
 Tên mẹ: Triệu Thị Thuỳ Linh
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1992
-Số Điện Thoại: 328590640
+Số Điện Thoại: 0328590640
 Điện thoại bố: Không có
-Điện thoại mẹ: 376400441
+Điện thoại mẹ: 0376400441
 
 39. Triệu Thanh Tú
 Mã học sinh: 2407547207
@@ -1242,9 +1242,9 @@ Năm sinh cha: 1979
 Tên mẹ: Quách Xuân Trang
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1983
-Số Điện Thoại: 338109737
-Điện thoại bố: 877668906
-Điện thoại mẹ: 904395460
+Số Điện Thoại: 0338109737
+Điện thoại bố: 0877668906
+Điện thoại mẹ: 0904395460
 
 40. Dương Thị Bích Tuyền
 Mã học sinh: 2407547227
@@ -1274,9 +1274,9 @@ Năm sinh cha: 1983
 Tên mẹ: Lâm Thị Hồng Loan
 Nghề nghiệp mẹ: Thợ may
 Năm sinh mẹ: 1992
-Số Điện Thoại: 355107105
-Điện thoại bố: 353587428
-Điện thoại mẹ: 968981733
+Số Điện Thoại: 0355107105
+Điện thoại bố: 0353587428
+Điện thoại mẹ: 0968981733
 
 41. Trần Văn Tý
 Mã học sinh: 2407547247
@@ -1306,9 +1306,9 @@ Năm sinh cha: 1981
 Tên mẹ: Lâm Thị Sô Nal
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1974
-Số Điện Thoại: 865491920
-Điện thoại bố: 345327211
-Điện thoại mẹ: 866929024
+Số Điện Thoại: 0865491920
+Điện thoại bố: 0345327211
+Điện thoại mẹ: 0866929024
 
 42. Huỳnh Công Vinh
 Mã học sinh: 2407547327
@@ -1338,8 +1338,8 @@ Năm sinh cha: 1980
 Tên mẹ: Trương Hạnh Hoa
 Nghề nghiệp mẹ: Mất
 Năm sinh mẹ: Không có
-Số Điện Thoại: 343990444
-Điện thoại bố: 907167916
+Số Điện Thoại: 0343990444
+Điện thoại bố: 0907167916
 Điện thoại mẹ: Không có
 
 43. Dương Thị Ngọc Vy
@@ -1370,9 +1370,9 @@ Năm sinh cha: 1979
 Tên mẹ: Trần Thị Đang
 Nghề nghiệp mẹ: Làm nông
 Năm sinh mẹ: 1984
-Số Điện Thoại: 832565700
-Điện thoại bố: 916626252
-Điện thoại mẹ: 944396596
+Số Điện Thoại: 0832565700
+Điện thoại bố: 0916626252
+Điện thoại mẹ: 0944396596
 
 44. Nguyễn Tường Vy
 Mã học sinh: 2407547287
@@ -1402,9 +1402,9 @@ Năm sinh cha: 1973
 Tên mẹ: Võ Thị Kiều Trang
 Nghề nghiệp mẹ: Thợ may
 Năm sinh mẹ: 1984
-Số Điện Thoại: 842742339
-Điện thoại bố: 846814811
-Điện thoại mẹ: 333665707
+Số Điện Thoại: 0842742339
+Điện thoại bố: 0846814811
+Điện thoại mẹ: 0333665707
 
 45. Trịnh Thị Kim Yến
 Mã học sinh: 2407547307
@@ -1434,7 +1434,7 @@ Năm sinh cha: 1980
 Tên mẹ: Lý Bé Thảo
 Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1982
-Số Điện Thoại: 392016034
-Điện thoại bố: 385915766
-Điện thoại mẹ: 336600677
+Số Điện Thoại: 0392016034
+Điện thoại bố: 0385915766
+Điện thoại mẹ: 0336600677
 

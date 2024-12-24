@@ -68,7 +68,7 @@
                     // Duyệt qua dữ liệu và thêm tên học sinh vào dropdown
                     for (let i = 0; i < lines.length; i++) {
                         const line = lines[i].trim();
-                        if (line.startsWith('1.')) { // Dòng bắt đầu với số thứ tự (ví dụ: 1. Lại Quế Anh)
+                        if (line.startsWith('1.') || line.startsWith('2.')) { // Dòng bắt đầu với số thứ tự (ví dụ: 1. Lại Quế Anh)
                             if (currentStudent.name) {
                                 students.push(currentStudent);
                             }
