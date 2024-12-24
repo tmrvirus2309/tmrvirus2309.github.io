@@ -13,7 +13,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -45,7 +45,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -77,7 +77,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -92,7 +92,7 @@ Nghề nghiệp mẹ: Mất
 Năm sinh mẹ: 1989
 Số Điện Thoại: 0794857323
 Điện thoại bố: 0378120377
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 4. Thạch Kim Anh
 Mã học sinh: 2407546547
@@ -109,7 +109,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Khơ-me
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -141,7 +141,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -173,7 +173,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -205,7 +205,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ VỀ TRẬT TỰ X�
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -220,7 +220,7 @@ Nghề nghiệp mẹ: Làm mướn
 Năm sinh mẹ: 1987
 Số Điện Thoại: 0369337655
 Điện thoại bố: 0362888837
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 8. Trần Thị Hồng Diệp
 Mã học sinh: 2407546627
@@ -237,7 +237,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -269,7 +269,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Khmer
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -301,7 +301,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUÀN LÝ HÀNH CHÍNH VỀ TR
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -333,7 +333,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT  QUẢN LÝ HÀNH CHÍNH VỀ 
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -348,7 +348,7 @@ Nghề nghiệp mẹ: Nội Trợ
 Năm sinh mẹ: 1981
 Số Điện Thoại: 0988058934
 Điện thoại bố: 0988058934
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 12. Phạm Tấn Đạt
 Mã học sinh: 2407547347
@@ -365,7 +365,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -397,7 +397,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -429,7 +429,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -461,7 +461,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Hoa
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -493,7 +493,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -501,10 +501,10 @@ Cận nghèo: 0
 Đội viên: 0
 Con giáo viên: 0
 Tên cha: Nguyễn Tấn Lực
-Nghề nghiệp cha: Không có
+Nghề nghiệp cha: Không
 Năm sinh cha: 1982
 Tên mẹ: Trần Thị Mỹ Hiên
-Nghề nghiệp mẹ: Không có
+Nghề nghiệp mẹ: Không
 Năm sinh mẹ: 1982
 Số Điện Thoại: 0379982830
 Điện thoại bố: 0988708975
@@ -525,7 +525,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -557,7 +557,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Hoa
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -572,7 +572,7 @@ Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1986
 Số Điện Thoại: 0386534553
 Điện thoại bố: 0946555234
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 19. Lưu Vỹ Khang
 Mã học sinh: 2407546807
@@ -589,7 +589,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -597,14 +597,14 @@ Cận nghèo: 0
 Đội viên: 0
 Con giáo viên: 0
 Tên cha: Lưu Đức Thọ
-Nghề nghiệp cha: Không có
-Năm sinh cha: Không có
+Nghề nghiệp cha: Không
+Năm sinh cha: Không
 Tên mẹ: Huỳnh Thị Bảo Châu
-Nghề nghiệp mẹ: Không có
-Năm sinh mẹ: Không có
+Nghề nghiệp mẹ: Không
+Năm sinh mẹ: Không
 Số Điện Thoại: 0355920927
 Điện thoại bố: 0355920927
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 20. Nguyễn Thanh Lâm
 Mã học sinh: 2407546827
@@ -621,7 +621,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUÁN LÝ HÀNH CHÍNH VỀ TR
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -653,7 +653,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỘNG CẢNH SÁT QUẢN LÝ VỀ TRẬT TỰ X
 Dân tộc: Khmer
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -668,7 +668,7 @@ Nghề nghiệp mẹ: Buôn bán
 Năm sinh mẹ: 1985
 Số Điện Thoại: 0342975675
 Điện thoại bố: 0342975675
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 22. Triệu Thị Ngọc Linh
 Mã học sinh: 2407546867
@@ -685,7 +685,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT  QUẢN LÝ HÀNH CHÍNH VỀ 
 Dân tộc: Khmer
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -717,7 +717,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ VỀ TRẬT TỰ X�
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -749,7 +749,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Khơ-me
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -764,7 +764,7 @@ Nghề nghiệp mẹ: Công nhân
 Năm sinh mẹ: 1980
 Số Điện Thoại: 0706352655
 Điện thoại bố: 0706352655
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 25. Quách Thảo My
 Mã học sinh: 2407546927
@@ -781,7 +781,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Hoa
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -813,7 +813,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Khơ-me
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -845,7 +845,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -877,7 +877,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÁNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -909,7 +909,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -941,7 +941,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH NHÀ N
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -956,7 +956,7 @@ Nghề nghiệp mẹ: Làm ruộng
 Năm sinh mẹ: 1985
 Số Điện Thoại: 0941723884
 Điện thoại bố: 0818104909
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 31. Nguyễn Thị Xuân Quỳnh
 Mã học sinh: 2407547047
@@ -973,7 +973,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ VỀ TRẬT TỰ X�
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1005,7 +1005,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Khmer
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1037,7 +1037,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1069,7 +1069,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1101,7 +1101,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1133,7 +1133,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Hoa
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1165,7 +1165,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1173,14 +1173,14 @@ Cận nghèo: 0
 Đội viên: 0
 Con giáo viên: 0
 Tên cha: Nguyễn Tú Hoa
-Nghề nghiệp cha: Không có
-Năm sinh cha: Không có
+Nghề nghiệp cha: Không
+Năm sinh cha: Không
 Tên mẹ: Lâm Mỹ Thoa
-Nghề nghiệp mẹ: Không có
-Năm sinh mẹ: Không có
-Số Điện Thoại: Không có
-Điện thoại bố: Không có
-Điện thoại mẹ: Không có
+Nghề nghiệp mẹ: Không
+Năm sinh mẹ: Không
+Số Điện Thoại: Không
+Điện thoại bố: Không
+Điện thoại mẹ: Không
 
 38. Châu Thị Thủy Trúc
 Mã học sinh: 2407547187
@@ -1197,7 +1197,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT HÀNH CHÍNH VỀ TRẬT TỰ 
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1211,7 +1211,7 @@ Tên mẹ: Triệu Thị Thuỳ Linh
 Nghề nghiệp mẹ: Nội trợ
 Năm sinh mẹ: 1992
 Số Điện Thoại: 0328590640
-Điện thoại bố: Không có
+Điện thoại bố: Không
 Điện thoại mẹ: 0376400441
 
 39. Triệu Thanh Tú
@@ -1229,7 +1229,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1261,7 +1261,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1293,7 +1293,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÁNH VỀ T
 Dân tộc: Khmer
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1325,7 +1325,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1337,10 +1337,10 @@ Nghề nghiệp cha: Thợ Hồ
 Năm sinh cha: 1980
 Tên mẹ: Trương Hạnh Hoa
 Nghề nghiệp mẹ: Mất
-Năm sinh mẹ: Không có
+Năm sinh mẹ: Không
 Số Điện Thoại: 0343990444
 Điện thoại bố: 0907167916
-Điện thoại mẹ: Không có
+Điện thoại mẹ: Không
 
 43. Dương Thị Ngọc Vy
 Mã học sinh: 2407547267
@@ -1357,7 +1357,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1389,7 +1389,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0
@@ -1421,7 +1421,7 @@ Nơi cấp CMT: CỤC TRƯỞNG CỤC CẢNH SÁT QUẢN LÝ HÀNH CHÍNH VỀ T
 Dân tộc: Kinh
 Tôn giáo: Không
 Diện chính sách: Không
-Diện Khuyết tật: Không có
+Diện Khuyết tật: Không
 Diện ưu tiên: Không
 Diện ưu đãi: Không
 Cận nghèo: 0

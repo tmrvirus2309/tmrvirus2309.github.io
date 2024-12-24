@@ -145,8 +145,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <audio id="background-music" autoplay loop>
-        <source src="https://r2.guns.lol/92f82931-0b65-4f9c-b398-be37cb620cbb.mp3" type="audio/mp3">
+    <audio id="audioPlayer" autoplay>
         Your browser does not support the audio element.
     </audio>
     <div class="container">
@@ -157,11 +156,27 @@
             <option value="">--Bấm Vào Đây Để Chọn Học Sinh--</option>
         </select>
 
-        <div class="loading" id="loading-message">Đang Tải Thông Tin Học Sinh...</div>
-
         <div id="student-info"></div>
 
     <script>
+        const songs = [
+            "https://r2.guns.lol/439a04f1-acb4-4461-8bb2-47521ae17224.mp3",
+            "https://r2.guns.lol/92f82931-0b65-4f9c-b398-be37cb620cbb.mp3"
+        ];
+
+        // Chọn một bài hát ngẫu nhiên từ mảng
+        function playRandomSong() {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            const selectedSong = songs[randomIndex];
+
+            // Cập nhật nguồn nhạc và phát
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = selectedSong;
+            audioPlayer.play();
+        }
+
+        // Phát bài hát ngẫu nhiên khi trang được tải
+        playRandomSong();
         const students = [];
         let currentStudent = {}; // Only used for processing, not for display
         let isProcessingStudent = false;
