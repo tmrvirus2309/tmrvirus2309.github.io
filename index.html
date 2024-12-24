@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin học sinh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,15 +17,39 @@
             align-items: center;
             height: 100vh;
         }
+
+    
+        /* Đặt video làm nền */
+        .background-video {
+            position: fixed; /* Đặt video ở phía sau */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo video phủ toàn bộ màn hình mà không bị biến dạng */
+            z-index: -1; /* Đưa video ra phía sau tất cả các phần tử */
+        }
         
+        /* Các phần tử chính trên trang */
         .container {
-            width: 90%;
+            position: relative;
+            width: 80%;
             max-width: 800px;
             padding: 20px;
-            background-color: #fff;
+            background-color: transparent; /* Màu nền trong suốt */
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Đảm bảo nội dung nằm trên video */
         }
+        
+        /* GIF tiêu đề */
+        .header-gif {
+            width: 100%; /* Điều chỉnh độ rộng theo ý muốn */
+            height: auto; /* Giữ tỷ lệ khung hình của GIF */
+            display: block; /* Đảm bảo ảnh không có khoảng trống bên dưới */
+            border-radius: 10px; /* Thêm bo góc nếu cần */
+        }
+        
 
         h1 {
             text-align: center;
@@ -43,7 +69,7 @@
             font-size: 16px;
             border-radius: 5px;
             border: 2px solid #3498db;
-            background-color: #fafafa;
+            background-color: transparent;
             margin-bottom: 20px;
             box-sizing: border-box;
             transition: border-color 0.3s ease;
@@ -101,24 +127,52 @@
             85% { border-color: violet; }
             100% { border-color: red; }
         }
+        .header-gif {
+            width: 100%; /* Điều chỉnh độ rộng theo ý muốn */
+            height: auto; /* Giữ tỷ lệ khung hình của GIF */
+            display: block; /* Đảm bảo ảnh không có khoảng trống bên dưới */
+            border-radius: 10px; /* Thêm bo góc nếu cần */
+        }
 
     </style>
 </head>
 <body>
+    <div class="background-video">
+        <video autoplay loop muted>
+            <source src="https://r2.guns.lol/5ae91b69-1901-4129-985c-d8624c60f3f5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <div class="container">
-        <h1>Thông tin học sinh</h1>
-        
-        <label for="student-select">Chọn học sinh:</label>
+        <img src="https://files.catbox.moe/z5ac9f.gif" alt="Thông tin học sinh" class="header-gif">
+        <h1></h1>
+        <label for="student-select">Chọn Học Sinh:</label>
         <select id="student-select">
-            <option value="">--Chọn học sinh--</option>
+            <option value="">--Bấm Vào Đây Để Chọn Học Sinh--</option>
         </select>
 
-        <div class="loading" id="loading-message">Đang tải thông tin học sinh...</div>
+        <div class="loading" id="loading-message">Đang Tải Thông Tin Học Sinh...</div>
 
         <div id="student-info"></div>
     </div>
 
     <script>
+        const musicFiles = [
+            "https://r2.guns.lol/439a04f1-acb4-4461-8bb2-47521ae17224.mp3",
+            "https://r2.guns.lol/92f82931-0b65-4f9c-b398-be37cb620cbb.mp3"
+        ];
+
+        // Chọn ngẫu nhiên một bài nhạc
+        const randomMusic = musicFiles[Math.floor(Math.random() * musicFiles.length)];
+
+        // Cập nhật nguồn cho thẻ audio
+        const audioElement = document.getElementById('background-music');
+        audioElement.src = randomMusic;
+    
         const students = [];
         let currentStudent = {};
         let isProcessingStudent = false;
@@ -131,6 +185,7 @@
                     const lines = data.split('\n');
                     lines.forEach(line => {
                         if (/^\d{1,2}\./.test(line)) {
+                            // Khi gặp số thứ tự học sinh, lưu thông tin học sinh cũ và bắt đầu thông tin học sinh mới
                             if (currentStudent.name) {
                                 students.push(currentStudent);
                             }
@@ -145,12 +200,16 @@
                                 currentStudent.dob = line.split(': ')[1];
                             } else if (line.startsWith('Giới tính:')) {
                                 currentStudent.gender = line.split(': ')[1];
-                            } else if (line.startsWith('Chỗ ở hiện nay:')) {
-                                currentStudent.address = line.split(': ')[1];
-                            } else if (line.startsWith('Số Điện Thoại:')) {
-                                currentStudent.phone = line.split(': ')[1];
+                            } else if (line.startsWith('Chỗ ở hiện nay:') || line.startsWith('Nơi sinh:') || line.startsWith('Quê quán:') || line.startsWith('Ngày cấp CMT:') || line.startsWith('Nơi cấp CMT:') || line.startsWith('Dân tộc:') || line.startsWith('Tôn giáo:') || line.startsWith('Diện Khuyết tật:') || line.startsWith('Diện ưu tiên:') || line.startsWith('Diện ưu đãi:') || line.startsWith('Cận nghèo:') || line.startsWith('Đoàn viên:') || line.startsWith('Đội viên:') || line.startsWith('Con giáo viên:') || line.startsWith('Tên cha:') || line.startsWith('Nghề nghiệp cha:') || line.startsWith('Năm sinh cha:') || line.startsWith('Tên mẹ:') || line.startsWith('Nghề nghiệp mẹ:') || line.startsWith('Năm sinh mẹ:') || line.startsWith('Số Điện Thoại:') || line.startsWith('Điện thoại bố:') || line.startsWith('Điện thoại mẹ:')) {
+                                // Xử lý các trường hợp khác
+                                const key = line.split(': ')[0].trim(); // Lấy tên trường
+                                const value = line.split(': ')[1].trim(); // Lấy giá trị
+                                if (key === 'Chỗ ở hiện nay' || key === 'Nơi sinh' || key === 'Quê quán' || key === 'Ngày cấp CMT' || key === 'Nơi cấp CMT' || key === 'Dân tộc' || key === 'Tôn giáo' || key === 'Diện Khuyết tật' || key === 'Diện ưu tiên' || key === 'Diện ưu đãi' || key === 'Cận nghèo' || key === 'Đoàn viên' || key === 'Đội viên' || key === 'Con giáo viên' || key === 'Tên cha' || key === 'Nghề nghiệp cha' || key === 'Năm sinh cha' || key === 'Tên mẹ' || key === 'Nghề nghiệp mẹ' || key === 'Năm sinh mẹ' || key === 'Số Điện Thoại' || key === 'Điện thoại bố' || key === 'Điện thoại mẹ') {
+                                    currentStudent[key] = value;
+                                }
                             }
                         }
+                        
                     });
 
                     if (currentStudent.name) {
@@ -186,8 +245,30 @@
                     <p><strong>Ngày sinh:</strong> ${student.dob}</p>
                     <p><strong>Giới tính:</strong> ${student.gender}</p>
                     <p><strong>Chỗ ở hiện nay:</strong> ${student.address}</p>
+                    <p><strong>Nơi sinh:</strong> ${student.birthPlace}</p>
+                    <p><strong>Quê quán:</strong> ${student.hometown}</p>
+                    <p><strong>Ngày cấp CMT:</strong> ${student.idIssueDate}</p>
+                    <p><strong>Nơi cấp CMT:</strong> ${student.idIssuePlace}</p>
+                    <p><strong>Dân tộc:</strong> ${student.ethnicity}</p>
+                    <p><strong>Tôn giáo:</strong> ${student.religion}</p>
+                    <p><strong>Diện Khuyết tật:</strong> ${student.disability}</p>
+                    <p><strong>Diện ưu tiên:</strong> ${student.priorityStatus}</p>
+                    <p><strong>Diện ưu đãi:</strong> ${student.discountStatus}</p>
+                    <p><strong>Cận nghèo:</strong> ${student.poorStatus}</p>
+                    <p><strong>Đoàn viên:</strong> ${student.youthUnionMember}</p>
+                    <p><strong>Đội viên:</strong> ${student.teamMember}</p>
+                    <p><strong>Con giáo viên:</strong> ${student.isTeacherChild}</p>
+                    <p><strong>Tên cha:</strong> ${student.fatherName}</p>
+                    <p><strong>Nghề nghiệp cha:</strong> ${student.fatherOccupation}</p>
+                    <p><strong>Năm sinh cha:</strong> ${student.fatherBirthYear}</p>
+                    <p><strong>Tên mẹ:</strong> ${student.motherName}</p>
+                    <p><strong>Nghề nghiệp mẹ:</strong> ${student.motherOccupation}</p>
+                    <p><strong>Năm sinh mẹ:</strong> ${student.motherBirthYear}</p>
                     <p><strong>Số Điện Thoại:</strong> ${student.phone}</p>
+                    <p><strong>Điện thoại bố:</strong> ${student.fatherPhone}</p>
+                    <p><strong>Điện thoại mẹ:</strong> ${student.motherPhone}</p>
                 `;
+
                 infoDiv.style.display = 'block'; // Hiển thị thông tin học sinh khi chọn
             } else {
                 infoDiv.style.display = 'none';
