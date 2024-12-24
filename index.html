@@ -255,18 +255,23 @@
                     if (currentStudent.name) {
                         students.push(currentStudent);
                     }
-    
-                    // Populate the dropdown with student names
-                    const studentSelect = document.getElementById('student-select');
-                    students.forEach(student => {
-                        const option = document.createElement('option');
-                        option.value = student.name;
-                        option.textContent = student.name;
-                        studentSelect.appendChild(option);
-                    });
-    
-                    document.getElementById('loading-message').style.display = 'none'; // Hide loading message after data is loaded
-                });
+
+                    updateStudentSelect();
+                })
+                .catch(error => console.error('Lỗi khi tải file:', error));
+        }
+
+        function updateStudentSelect() {
+            const select = document.getElementById('student-select');
+            const loadingMessage = document.getElementById('loading-message');
+            loadingMessage.style.display = 'none'; // Ẩn thông điệp tải khi đã có dữ liệu
+
+            students.forEach((student, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = student.name;
+                select.appendChild(option);
+            });
         }
 
         function displayStudentInfo(index) {
@@ -310,12 +315,12 @@
             }
         }
 
-        document.getElementById('student-select').addEventListener('change', function() {
-            const selectedStudent = this.value;
-            displayStudentInfo(selectedStudent);
+        document.getElementById('student-select').addEventListener('change', function () {
+            const selectedIndex = this.value;
+            displayStudentInfo(selectedIndex);
         });
-    
-        loadFile();
+
+        loadFile(); // Tải file khi trang web được tải
     </script>
 </body>
 </html>
