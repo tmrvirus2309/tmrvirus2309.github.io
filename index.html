@@ -146,7 +146,7 @@
         </video>
     </div>
     <audio id="background-music" autoplay loop>
-        <source src="" type="audio/mp3">
+        <source src="https://r2.guns.lol/92f82931-0b65-4f9c-b398-be37cb620cbb.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
     <div class="container">
@@ -163,17 +163,6 @@
     </div>
 
     <script>
-        const musicFiles = [
-            "https://r2.guns.lol/439a04f1-acb4-4461-8bb2-47521ae17224.mp3",
-            "https://r2.guns.lol/92f82931-0b65-4f9c-b398-be37cb620cbb.mp3"
-        ];
-
-        // Chọn ngẫu nhiên một bài nhạc
-        const randomMusic = musicFiles[Math.floor(Math.random() * musicFiles.length)];
-
-        // Cập nhật nguồn cho thẻ audio
-        const audioElement = document.getElementById('background-music');
-        audioElement.src = randomMusic;
     
         const students = [];
         let currentStudent = {};
