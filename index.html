@@ -165,19 +165,21 @@
         alert("Admin Website By Rov!");
         document.addEventListener("DOMContentLoaded", () => {
             const audioElement = document.getElementById("playAudio");
-            const studentSelect = document.getElementById("student-select");
 
-            // Thêm sự kiện cho dropdown
-            studentSelect.addEventListener("change", function () {
-                // Kiểm tra nếu có chọn học sinh
-                if (this.value !== "") {
-                    // Phát nhạc
-                    audioElement.play().then(() => {
-                        console.log("Nhạc đã phát.");
-                    }).catch(error => {
-                        console.error("Không thể phát nhạc:", error);
-                    });
-                }
+            // Kiểm tra phần tử audio có tồn tại không
+            if (!audioElement) {
+                console.error("Không tìm thấy phần tử audio.");
+                return;
+            }
+
+            // Lắng nghe sự kiện click trên toàn bộ trang
+            document.addEventListener("click", function playMusic() {
+                // Phát nhạc
+                audioElement.play().then(() => {
+                    document.removeEventListener("click", playMusic);
+                }).catch(error => {
+                    console.error("Không thể phát nhạc:", error);
+                });
             });
         });
         const students = [];
