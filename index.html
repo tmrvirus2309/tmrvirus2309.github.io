@@ -148,7 +148,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <audio autoplay loop id="playAudio" style="display: none;">
+    <audio id="playAudio" style="display: none;">
         <source src="1.mp3" type="audio/mp3">
     </audio>
     <div class="container">
@@ -162,8 +162,18 @@
         <div id="student-info"></div>
 
     <script>
-        document.getElementById("playAudio").style.display = "block";
-        alert("Admin Website By Rov!");
+        const audioElement = document.getElementById("playAudio");
+        const alertButton = document.getElementById("alertButton");
+
+        // Thêm sự kiện cho nút bấm
+        alertButton.addEventListener("click", function () {
+            alert("Admin Website By Rov!");
+            
+            // Phát nhạc
+            audioElement.play().catch(error => {
+                console.error("Không thể phát nhạc:", error);
+            });
+        });
         const students = [];
         let currentStudent = {}; // Only used for processing, not for display
         let isProcessingStudent = false;
