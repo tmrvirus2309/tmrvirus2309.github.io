@@ -81,7 +81,34 @@
         }
 
         #student-info {
-            margin-top: 20px;
+            background-color: transparent; /* Giữ nền trong suốt */
+            padding: 15px;
+            border-radius: 8px;
+            border: 4px solid transparent; /* Khung viền ban đầu là trong suốt */
+            background-image: transparent;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            animation: colorChange 5s linear infinite; /* Thêm hiệu ứng chuyển màu */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            max-height: 400px; /* Thiết lập chiều cao tối đa */
+            overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung quá dài */
+        }
+        
+        #student-info h3 {
+            color: #2980b9;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        #student-info p {
+            font-size: 16px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        #student-info p strong {
+            color: #2980b9;
         }
 
 
@@ -135,14 +162,14 @@
         <div id="student-info"></div>
 
     <script>
-    
+        // Đọc file txt và phân tích thông tin học sinh
         const students = [];
         let currentStudent = {};
         let isProcessingStudent = false;
 
         // Function để tải và phân tích nội dung file
         function loadFile() {
-            const file = 'data.txt'; // Tên file txt chứa dữ liệu học sinh
+            const file = 'students.txt'; // Tên file txt chứa dữ liệu học sinh
             fetch(file)
                 .then(response => response.text())
                 .then(data => {
@@ -150,6 +177,7 @@
                     lines.forEach(line => {
                         // Kiểm tra các số thứ tự từ 1 đến 45
                         if (/^\d{1,2}\./.test(line)) {
+                            // Lưu thông tin học sinh cũ nếu có
                             if (currentStudent.name) {
                                 students.push(currentStudent);
                             }
@@ -166,54 +194,13 @@
                                 currentStudent.gender = line.split(': ')[1];
                             } else if (line.startsWith('Chỗ ở hiện nay:')) {
                                 currentStudent.address = line.split(': ')[1];
-                            } else if (line.startsWith('Nơi sinh:')) {
-                                currentStudent.birthPlace = line.split(': ')[1];
-                            } else if (line.startsWith('Quê quán:')) {
-                                currentStudent.hometown = line.split(': ')[1];
-                            } else if (line.startsWith('Ngày cấp CMT:')) {
-                                currentStudent.idIssueDate = line.split(': ')[1];
-                            } else if (line.startsWith('Nơi cấp CMT:')) {
-                                currentStudent.idIssuePlace = line.split(': ')[1];
-                            } else if (line.startsWith('Dân tộc:')) {
-                                currentStudent.ethnicity = line.split(': ')[1];
-                            } else if (line.startsWith('Tôn giáo:')) {
-                                currentStudent.religion = line.split(': ')[1];
-                            } else if (line.startsWith('Diện Khuyết tật:')) {
-                                currentStudent.disability = line.split(': ')[1];
-                            } else if (line.startsWith('Diện ưu tiên:')) {
-                                currentStudent.priorityStatus = line.split(': ')[1];
-                            } else if (line.startsWith('Diện ưu đãi:')) {
-                                currentStudent.discountStatus = line.split(': ')[1];
-                            } else if (line.startsWith('Cận nghèo:')) {
-                                currentStudent.poorStatus = line.split(': ')[1];
-                            } else if (line.startsWith('Đoàn viên:')) {
-                                currentStudent.youthUnionMember = line.split(': ')[1];
-                            } else if (line.startsWith('Đội viên:')) {
-                                currentStudent.teamMember = line.split(': ')[1];
-                            } else if (line.startsWith('Con giáo viên:')) {
-                                currentStudent.isTeacherChild = line.split(': ')[1];
-                            } else if (line.startsWith('Tên cha:')) {
-                                currentStudent.fatherName = line.split(': ')[1];
-                            } else if (line.startsWith('Nghề nghiệp cha:')) {
-                                currentStudent.fatherOccupation = line.split(': ')[1];
-                            } else if (line.startsWith('Năm sinh cha:')) {
-                                currentStudent.fatherBirthYear = line.split(': ')[1];
-                            } else if (line.startsWith('Tên mẹ:')) {
-                                currentStudent.motherName = line.split(': ')[1];
-                            } else if (line.startsWith('Nghề nghiệp mẹ:')) {
-                                currentStudent.motherOccupation = line.split(': ')[1];
-                            } else if (line.startsWith('Năm sinh mẹ:')) {
-                                currentStudent.motherBirthYear = line.split(': ')[1];
                             } else if (line.startsWith('Số Điện Thoại:')) {
                                 currentStudent.phone = line.split(': ')[1];
-                            } else if (line.startsWith('Điện thoại bố:')) {
-                                currentStudent.fatherPhone = line.split(': ')[1];
-                            } else if (line.startsWith('Điện thoại mẹ:')) {
-                                currentStudent.motherPhone = line.split(': ')[1];
                             }
                         }
                     });
 
+                    // Đảm bảo thêm học sinh cuối cùng
                     if (currentStudent.name) {
                         students.push(currentStudent);
                     }
@@ -224,6 +211,7 @@
                 .catch(error => console.error('Lỗi khi tải file:', error));
         }
 
+        // Hàm cập nhật danh sách học sinh vào select
         function updateStudentSelect() {
             const select = document.getElementById('student-select');
             students.forEach((student, index) => {
@@ -240,42 +228,20 @@
             const infoDiv = document.getElementById('student-info');
             if (student) {
                 infoDiv.innerHTML = `
-                    <h3>Thông tin học sinh: ${currentStudent.name}</h3>
-                    <p><strong>Mã học sinh:</strong> ${currentStudent.studentId}</p>
-                    <p><strong>Số định danh cá nhân:</strong> ${currentStudent.idNumber}</p>
-                    <p><strong>Ngày sinh:</strong> ${currentStudent.dob}</p>
-                    <p><strong>Giới tính:</strong> ${currentStudent.gender}</p>
-                    <p><strong>Chỗ ở hiện nay:</strong> ${currentStudent.address}</p>
-                    <p><strong>Nơi sinh:</strong> ${currentStudent.birthPlace}</p>
-                    <p><strong>Quê quán:</strong> ${currentStudent.hometown}</p>
-                    <p><strong>Ngày cấp CMT:</strong> ${currentStudent.idIssueDate}</p>
-                    <p><strong>Nơi cấp CMT:</strong> ${currentStudent.idIssuePlace}</p>
-                    <p><strong>Dân tộc:</strong> ${currentStudent.ethnicity}</p>
-                    <p><strong>Tôn giáo:</strong> ${currentStudent.religion}</p>
-                    <p><strong>Diện Khuyết tật:</strong> ${currentStudent.disability}</p>
-                    <p><strong>Diện ưu tiên:</strong> ${currentStudent.priorityStatus}</p>
-                    <p><strong>Diện ưu đãi:</strong> ${currentStudent.discountStatus}</p>
-                    <p><strong>Cận nghèo:</strong> ${currentStudent.poorStatus}</p>
-                    <p><strong>Đoàn viên:</strong> ${currentStudent.youthUnionMember}</p>
-                    <p><strong>Đội viên:</strong> ${currentStudent.teamMember}</p>
-                    <p><strong>Con giáo viên:</strong> ${currentStudent.isTeacherChild}</p>
-                    <p><strong>Tên cha:</strong> ${currentStudent.fatherName}</p>
-                    <p><strong>Nghề nghiệp cha:</strong> ${currentStudent.fatherOccupation}</p>
-                    <p><strong>Năm sinh cha:</strong> ${currentStudent.fatherBirthYear}</p>
-                    <p><strong>Tên mẹ:</strong> ${currentStudent.motherName}</p>
-                    <p><strong>Nghề nghiệp mẹ:</strong> ${currentStudent.motherOccupation}</p>
-                    <p><strong>Năm sinh mẹ:</strong> ${currentStudent.motherBirthYear}</p>
-                    <p><strong>Số Điện Thoại:</strong> ${currentStudent.phone}</p>
-                    <p><strong>Điện thoại bố:</strong> ${currentStudent.fatherPhone}</p>
-                    <p><strong>Điện thoại mẹ:</strong> ${currentStudent.motherPhone}</p>
+                    <h3>Thông tin học sinh: ${student.name}</h3>
+                    <p><strong>Mã học sinh:</strong> ${student.studentId}</p>
+                    <p><strong>Số định danh cá nhân:</strong> ${student.idNumber}</p>
+                    <p><strong>Ngày sinh:</strong> ${student.dob}</p>
+                    <p><strong>Giới tính:</strong> ${student.gender}</p>
+                    <p><strong>Chỗ ở hiện nay:</strong> ${student.address}</p>
+                    <p><strong>Số Điện Thoại:</strong> ${student.phone}</p>
                 `;
-                
-                infoDiv.style.display = 'block'; // Hiển thị thông tin học sinh khi chọn
             } else {
-                infoDiv.style.display = 'none';
+                infoDiv.innerHTML = '';
             }
         }
 
+        // Xử lý sự kiện chọn học sinh từ danh sách
         document.getElementById('student-select').addEventListener('change', function () {
             const selectedIndex = this.value;
             displayStudentInfo(selectedIndex);
@@ -285,4 +251,4 @@
         loadFile();
     </script>
 </body>
-    </html>
+</html>
