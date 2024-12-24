@@ -27,7 +27,7 @@
 
         // Function để tải và phân tích nội dung file
         function loadFile() {
-            const file = 'data.txt'; // Tên file txt chứa dữ liệu học sinh
+            const file = 'students.txt'; // Tên file txt chứa dữ liệu học sinh
             fetch(file)
                 .then(response => response.text())
                 .then(data => {
@@ -81,25 +81,27 @@
         }
 
         // Hàm hiển thị thông tin học sinh khi chọn
-        function displayStudentInfo(index) {
-            const student = students[index];
-            const infoDiv = document.getElementById('student-info');
-            if (student) {
-                infoDiv.innerHTML = `
-                    <h3>Thông tin học sinh: ${student.name}</h3>
-                    <p><strong>Mã học sinh:</strong> ${student.studentId}</p>
-                    <p><strong>Số định danh cá nhân:</strong> ${student.idNumber}</p>
-                    <p><strong>Ngày sinh:</strong> ${student.dob}</p>
-                    <p><strong>Giới tính:</strong> ${student.gender}</p>
-                    <p><strong>Chỗ ở hiện nay:</strong> ${student.address}</p>
-                    <p><strong>Số Điện Thoại:</strong> ${student.phone}</p>
-                `;
-            } else {
-                infoDiv.innerHTML = '';
+        function showStudentInfo() {
+            const selectedName = document.getElementById('student-select').value;
+            const tableBody = document.getElementById('student-table').querySelector('tbody');
+            tableBody.innerHTML = ''; // Xóa dữ liệu cũ
+
+            if (selectedName) {
+                const student = students.find(s => s.name === selectedName);
+                if (student) {
+                    const row = `
+                        <tr>
+                            <td>${student.name}</td>
+                            <td>${student.studentId}</td>
+                            <td>${student.birthDate}</td>
+                            <td>${student.address}</td>
+                            <td>${student.phone}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                }
             }
         }
-
-        // Xử lý sự kiện chọn học sinh từ danh sách
         document.getElementById('student-select').addEventListener('change', function () {
             const selectedIndex = this.value;
             displayStudentInfo(selectedIndex);
@@ -107,6 +109,8 @@
 
         // Tải file txt khi trang web được tải
         loadFile();
+        // Tải dữ liệu khi trang được load
+        window.onload = loadData;
     </script>
 </body>
 </html>
