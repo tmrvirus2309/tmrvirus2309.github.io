@@ -148,7 +148,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <audio autoplay>
+    <audio autoplay loop  id="playAudio" style="display: none;">
       <source src="1.mp3">
     </audio>
     <div class="container">
@@ -162,6 +162,8 @@
         <div id="student-info"></div>
 
     <script>
+        document.querySelector(".parent").style.display = "block";
+        document.getElementById("playAudio").style.display = "block";
         alert("Admin Website By Rov!");
         const students = [];
         let currentStudent = {}; // Only used for processing, not for display
