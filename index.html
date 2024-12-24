@@ -24,11 +24,13 @@
             position: fixed; /* Đặt video ở phía sau */
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100%; /* Chiếm toàn bộ chiều rộng của màn hình */
+            height: 100%; /* Chiếm toàn bộ chiều cao của màn hình */
             object-fit: cover; /* Đảm bảo video phủ toàn bộ màn hình mà không bị biến dạng */
+            object-position: center;
             z-index: -1; /* Đưa video ra phía sau tất cả các phần tử */
         }
+
         
         /* Các phần tử chính trên trang */
         .container {
@@ -139,7 +141,7 @@
     </style>
 </head>
 <body>
-    <div class="background-video">
+    <div autoplay muted loop class="background-video">
         <video autoplay loop muted>
             <source src="https://r2.guns.lol/5ae91b69-1901-4129-985c-d8624c60f3f5.mp4" type="video/mp4">
             Your browser does not support the video tag.
