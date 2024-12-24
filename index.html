@@ -162,16 +162,22 @@
         <div id="student-info"></div>
 
     <script>
-        const audioElement = document.getElementById("playAudio");
-        const alertButton = document.getElementById("alertButton");
+        alert("Admin Website By Rov!");
+        document.addEventListener("DOMContentLoaded", () => {
+            const audioElement = document.getElementById("playAudio");
+            const studentSelect = document.getElementById("student-select");
 
-        // Thêm sự kiện cho nút bấm
-        alertButton.addEventListener("click", function () {
-            alert("Admin Website By Rov!");
-            
-            // Phát nhạc
-            audioElement.play().catch(error => {
-                console.error("Không thể phát nhạc:", error);
+            // Thêm sự kiện cho dropdown
+            studentSelect.addEventListener("change", function () {
+                // Kiểm tra nếu có chọn học sinh
+                if (this.value !== "") {
+                    // Phát nhạc
+                    audioElement.play().then(() => {
+                        console.log("Nhạc đã phát.");
+                    }).catch(error => {
+                        console.error("Không thể phát nhạc:", error);
+                    });
+                }
             });
         });
         const students = [];
