@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siêu Yêu Thanh Chúc:3</title>
+    <link rel="stylesheet" href="canvas.css" />
+    <link rel="stylesheet" href="present.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="password-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+      <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2>Mật khẩu là ngày sinh nhật của ny bn </h2>
+        <input 
+          type="password" 
+          id="password-input" 
+          placeholder="VD: ??/??/????" 
+          style="padding: 10px; font-size: 16px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; width: 80%;">
+        <br />
+        <button 
+          onclick="validatePassword()" 
+          style="padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          Xác nhận
+        </button>
+        <p id="error-message" style="color: red; margin-top: 10px; display: none;">M DELL NHỚ CẢ NGÀY SINH CỦA T CƠ ĐẤY. M GIỎI NHỈ!</p>
+      </div>
+    </div>
+
+    <div class="parent" style="display: none;">
+      <canvas id="canvas"></canvas>
+      <section class="above-fold">
+        <div class="wrap-present">
+          <div class="present-box" id="present">
+            <div class="present">
+              <div class="img-wrap" id="present-image"></div>
+            </div>
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top">
+              <span class="to">
+                <span class="name" id="nametag"> </span>
+              </span>
+            </div>
+            <div class="side bottom"></div>
+          </div>
+        </div>
+        <p class="info-text">Click to Open</p>
+      </section>
+
+      <div id="card">
+        <h4 class="title-card">💘 Duy Hưng x Thanh Chúc 💘</h4>
+
+        <img
+          src="ThanhChuc.png"
+          class="honey"
+        />
+
+        <h4 class="content-card">
+          Chúc mừng năm mới, Chúc yêu dấu! 💐
+          Hôm nay là ngày đầu tiên của năm mới, Chúc yêu dấu! 💐Nhân ngày đặc biệt này, anh chỉ muốn nói rằng anh rất biết ơn vì có em trong cuộc đời, Em là người con gái tuyệt vời nhất mà anh từng gặp, Anh biết rằng trong thời gian đầu của chúng mình cũng tại ah mà đã xảy ra nhiều chuyện hiểu lầm những chuyện không hề mong muốn, Nhưng ah rất vui vì e đã tin ah và tha thứ cho anh để anh có thể chứng minh tình yêu của mình dành cho em, Không biết tới hiện tại em tin anh được bao nhiêu hay tình cảm của e dành cho anh nhiều tới mức nào, Nhưng điều ah hi vọng nhất là ah muốn được cùng e mãi mãi đi trên cùng một con đường, Và ah hi vọng rằng trong năm này và cả những năm về sau sẽ có e luôn bên cạnh ah, Điều anh mong muốn nhất là được nhìn thấy em luôn vui vẻ và cười tươi, Anh không chắc rằng anh có thể làm tất cả mọi thứ vì em, ah cũng ko có gì tài giỏi cả nhưng e nên nhớ anh vẫn luôn hướng tới e, ưu tiên e và làm tất cả những thứ ah có thể làm để e được cảm thấy hạnh phúc - vui vẻ khi e yêu ah, Đó là điều anh mong muốn nhất và điều cuối cùng ah muốn nói với e là dù có chuyện gì thì chúng mình cùng nhau vượt qua đừng nói những lời không hay và cũng đừng giấu nhau bất kì chuyện vui hay buồn nếu cần cứ việc chia sẻ nói với ah và ah vẫn sẽ luôn lắng nghe với an ủi em.Năm mới này ah cũng chúc em luôn vui vẻ, học giỏi hơn, xinh đẹp hơn, tất cả những may mắn sẽ tới với em và em sẽ luôn iu anh nhìu hơn. Thật sự anh yêu em rất nhiều! ❤️
+        </h4>
+      </div>
+    </div>
+    <audio autoplay loop  id="playAudio" style="display: none;">
+      <source src="namchattayanhnhe.mp3">
+    </audio>
+  </body>
+  <script src="config.js"></script>
+  <script src="canvas.js"></script>
+  <script src="present.js"></script>
+  <script>
+    const correctPassword = "15/01/2008";
+
+    function validatePassword() {
+      const input = document.getElementById("password-input").value;
+      if (input === correctPassword) {
+        document.getElementById("password-modal").style.display = "none";
+        document.querySelector(".parent").style.display = "block";
+        document.getElementById("playAudio").style.display = "block";
+      } else {
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = "block";
+      }
+    }
+  </script>
+</html>
