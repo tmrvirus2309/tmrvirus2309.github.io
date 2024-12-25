@@ -164,21 +164,22 @@
         alert("Admin Website By Rov!");
         document.addEventListener("DOMContentLoaded", () => {
             const audioElement = document.getElementById("playAudio");
-
+    
             // Kiểm tra phần tử audio có tồn tại không
             if (!audioElement) {
                 console.error("Không tìm thấy phần tử audio.");
                 return;
             }
-
+    
             // Danh sách các bài nhạc
             const tracks = ["1.mp3", "2.mp3"];
-
+    
             // Lựa chọn ngẫu nhiên bài nhạc
             const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
-            audioElement.querySelector("source").src = randomTrack;
+            console.log("Bài nhạc được chọn:", randomTrack); // Debug để kiểm tra bài nhạc
+            audioElement.innerHTML = `<source src="${randomTrack}" type="audio/mp3">`;
             audioElement.load(); // Tải lại audio với bài nhạc mới
-
+    
             // Lắng nghe sự kiện click trên toàn bộ trang
             document.addEventListener("click", function playMusic() {
                 // Phát nhạc
