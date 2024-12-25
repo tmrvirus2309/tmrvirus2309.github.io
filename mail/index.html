@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Quản Lý Temp Mail</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://files.catbox.moe/yysv6i.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            font-family: 'Pacifico', sans-serif;
+        }
+
+        .form-container {
+            width: 400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+                        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 16px;
+        }
+
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .form-container .form-group label {
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-container .form-group input,
+        .form-container .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #414141;
+            box-sizing: border-box;
+        }
+
+        .form-container .form-group input:focus,
+        .form-container .form-group select:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container button {
+            padding: 12px;
+            background-color: #313131;
+            color: #717171;
+            border: 1px solid #414141;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #output {
+            width: 100%;
+            height: 200px;
+            overflow-y: auto;
+            background-color: #212121;
+            color: white;
+            border: 1px solid #414141;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <audio id="playAudio" style="display: none;">
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+    <div class="form-container">
+        <h2>Quản Lý Temp Mail</h2>
+        <div class="form-group">
+            <label for="email">📧 Email hiện tại:</label>
+            <input type="text" id="email" readonly>
+        </div>
+        <div class="form-group">
+            <label for="saved-mails">📂 Chọn Email đã lưu:</label>
+            <select id="saved-mails" onchange="selectSavedMail()">
+                <option value="">-- Chọn Email --</option>
+            </select>
+        </div>
+        <button onclick="generateMail()">🔄 Tạo Email Mới</button>
+        <button onclick="fetchMessages()">📩 Lấy Tin Nhắn</button>
+        <div id="output">Kết quả sẽ hiển thị ở đây...</div>
+    </div>
+
+    <script>
+        alert("Admin Website By Rov!");
+        document.addEventListener("DOMContentLoaded", () => {
+            const audioElement = document.getElementById("playAudio");
+    
+            // Kiểm tra phần tử audio có tồn tại không
+            if (!audioElement) {
+                console.error("Không tìm thấy phần tử audio.");
+                return;
+            }
+    
+            // Danh sách các bài nhạc
+            const tracks = ["1.mp3", "2.mp3"];
+    
+            // Lựa chọn ngẫu nhiên bài nhạc
+            const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+            console.log("Bài nhạc được chọn:", randomTrack); // Debug để kiểm tra bài nhạc
+            audioElement.innerHTML = `<source src="${randomTrack}" type="audio/mp3">`;
+            audioElement.load(); // Tải lại audio với bài nhạc mới
+    
+            // Lắng nghe sự kiện click trên toàn bộ trang
+            document.addEventListener("click", function playMusic() {
+                // Phát nhạc
+                audioElement.play().then(() => {
+                    document.removeEventListener("click", playMusic);
+                }).catch(error => {
+                    console.error("Không thể phát nhạc:", error);
+                });
+            });
+        });
+        let currentMail = "";
+
+        // Lấy IP của người dùng
+        async function getUserIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch {
+                return "Không thể lấy IP";
+            }
+        }
+
+        // Lưu email vào localStorage
+        function saveMail(ip, email) {
+            const savedMails = JSON.parse(localStorage.getItem("savedMails")) || {};
+            if (!savedMails[ip]) savedMails[ip] = [];
+            if (!savedMails[ip].includes(email)) savedMails[ip].push(email);
+            localStorage.setItem("savedMails", JSON.stringify(savedMails));
+            updateSavedMailsList(ip);
+        }
+
+        // Hiển thị danh sách email đã lưu
+        function updateSavedMailsList(ip) {
+            const savedMails = JSON.parse(localStorage.getItem("savedMails")) || {};
+            const emails = savedMails[ip] || [];
+            const select = document.getElementById("saved-mails");
+            select.innerHTML = '<option value="">-- Chọn Email --</option>';
+            emails.forEach(email => {
+                const option = document.createElement("option");
+                option.value = email;
+                option.textContent = email;
+                select.appendChild(option);
+            });
+        }
+
+        // Chọn email đã lưu
+        function selectSavedMail() {
+            const email = document.getElementById("saved-mails").value;
+            if (email) {
+                currentMail = email;
+                document.getElementById("email").value = currentMail;
+                document.getElementById("output").textContent = "✅ Đã chọn email: " + currentMail;
+            }
+        }
+
+        // Tạo email ngẫu nhiên
+        async function generateMail() {
+            try {
+                const response = await fetch("https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=1");
+                if (response.ok) {
+                    const data = await response.json();
+                    currentMail = data[0];
+                    document.getElementById("email").value = currentMail;
+                    const userIP = await getUserIP();
+                    saveMail(userIP, currentMail);
+                    document.getElementById("output").textContent = "🎉 Email mới của bạn: " + currentMail;
+                } else {
+                    document.getElementById("output").textContent = "❌ Không thể tạo email mới.";
+                }
+            } catch {
+                document.getElementById("output").textContent = "❌ Có lỗi xảy ra khi tạo email.";
+            }
+        }
+
+        // Lấy tin nhắn từ email
+        async function fetchMessages() {
+            if (!currentMail) {
+                document.getElementById("output").textContent = "❗ Hãy tạo email trước!";
+                return;
+            }
+
+            const [username, domain] = currentMail.split("@");
+            const url = `https://www.1secmail.com/api/v1/?action=getMessages&login=${username}&domain=${domain}`;
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const messages = await response.json();
+                    if (messages.length === 0) {
+                        document.getElementById("output").textContent = "📭 Không có tin nhắn nào.";
+                    } else {
+                        const output = messages.map(msg => 
+                            `🆔 ID: ${msg.id}\n📤 Từ: ${msg.from}\n📄 Chủ Đề: ${msg.subject}\n📅 Ngày: ${msg.date}\n\n`
+                        ).join("\n\n");
+                        document.getElementById("output").textContent = output;
+                    }
+                } else {
+                    document.getElementById("output").textContent = "❌ Không thể lấy tin nhắn.";
+                }
+            } catch {
+                document.getElementById("output").textContent = "❌ Có lỗi xảy ra khi lấy tin nhắn.";
+            }
+        }
+
+        // Khởi tạo
+        (async () => {
+            const userIP = await getUserIP();
+            document.getElementById("output").textContent = `🌐 IP của bạn: ${userIP}`;
+            updateSavedMailsList(userIP);
+        })();
+    </script>
+</body>
+</html>
