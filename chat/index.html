@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Chat Bot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Chat Bot"/>
+    <meta property="og:image" content="https://files.catbox.moe/yysv6i.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://files.catbox.moe/yysv6i.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        /* From Uiverse.io by gharsh11032000 */ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            /*font-family: 'Pacifico', sans-serif;*/
+        }
+
+        .form-container {
+            width: 400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+                        linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
+        .form-container button:active {
+            scale: 0.95;
+        }
+
+        .form-container .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-container .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid #414141;
+            box-sizing: border-box; /* Prevents overflow */
+        }
+
+        .form-container .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            resize: none;
+            color: #fff;
+            height: 96px;
+            border: 1px solid #414141;
+            background-color: transparent;
+            font-family: inherit;
+            box-sizing: border-box; /* Prevents overflow */
+        }
+
+        .form-container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+
+        .form-container .form-group input:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-group textarea:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-submit-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            align-self: flex-start;
+            font-family: inherit;
+            color: #717171;
+            font-weight: 600;
+            width: 40%;
+            background: #313131;
+            border: 1px solid #414141;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .form-container .form-submit-btn:hover {
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        /* Styling for output section */
+        #output {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            overflow-y: auto;
+            background-color: #212121;
+            color: white;
+            border: 1px solid #414141;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: pre-wrap; /* Ensures newlines are preserved */
+        }
+    </style>
+</head>
+<body>
+    <audio id="playAudio" style="display: none;">
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+    <div class="form-container">
+        <h1>Chat BOT</h1>
+        <div class="form">
+            <div class="form-group">
+                <label for="question">Nhập Câu Hỏi:</label>
+                <textarea id="question" placeholder="Nhập câu hỏi của bạn..."></textarea>
+            </div>
+            <button class="form-submit-btn" onclick="askChatGPT()">Ask ChatBOT</button>
+        </div>
+
+        <div id="output">Xin chào, tôi là Rov rất vui được gặp bạn...</div>
+    </div>
+
+    <script>
+        alert("Admin Website By Rov!");
+        document.addEventListener("DOMContentLoaded", () => {
+            const audioElement = document.getElementById("playAudio");
+    
+            // Kiểm tra phần tử audio có tồn tại không
+            if (!audioElement) {
+                console.error("Không tìm thấy phần tử audio.");
+                return;
+            }
+    
+            // Danh sách các bài nhạc
+            const tracks = ["1.mp3", "2.mp3"];
+    
+            // Lựa chọn ngẫu nhiên bài nhạc
+            const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+            console.log("Bài nhạc được chọn:", randomTrack); // Debug để kiểm tra bài nhạc
+            audioElement.innerHTML = `<source src="${randomTrack}" type="audio/mp3">`;
+            audioElement.load(); // Tải lại audio với bài nhạc mới
+    
+            // Lắng nghe sự kiện click trên toàn bộ trang
+            document.addEventListener("click", function playMusic() {
+                // Phát nhạc
+                audioElement.play().then(() => {
+                    document.removeEventListener("click", playMusic);
+                }).catch(error => {
+                    console.error("Không thể phát nhạc:", error);
+                });
+            });
+        });
+        async function askChatGPT() {
+            const question = document.getElementById('question').value;
+            const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent';
+            const params = {
+                'key': 'AIzaSyAAS4CmjtLudX3fRdip4f6SxTMAzNQmrag'
+            };
+            const headers = {
+                'Content-Type': 'application/json'
+            };
+            const payload = {
+                'contents': [
+                    {
+                        'parts': [
+                            { 'text': question + ' (trả lời Tiếng Việt)'}
+                        ]
+                    }
+                ]
+            };
+
+            try {
+                const response = await fetch(url + '?' + new URLSearchParams(params), {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+                        const answer = data.candidates[0].content.parts[0].text;
+                        document.getElementById('output').innerText = answer;
+                    } else {
+                        document.getElementById('output').innerText = "❌ Không thể lấy câu trả lời từ ChatBot.";
+                    }
+                } else {
+                    document.getElementById('output').innerText = "❌ Không thể kết nối đến API.";
+                }
+            } catch (error) {
+                document.getElementById('output').innerText = "❌ Lỗi kết nối!";
+            }
+        }
+    </script>
+</body>
+</html>
