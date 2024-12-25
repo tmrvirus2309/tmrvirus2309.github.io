@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Spam NGL Link</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Spam NGL Link"/>
+    <meta property="og:image" content="https://files.catbox.moe/yysv6i.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://files.catbox.moe/yysv6i.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        /* From Uiverse.io by gharsh11032000 */ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+        }
+
+        .form-container {
+            width: 400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+                        linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
+        .form-container button:active {
+            scale: 0.95;
+        }
+
+        .form-container .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-container .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid #414141;
+            box-sizing: border-box; /* Prevents overflow */
+        }
+
+        .form-container .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            resize: none;
+            color: #fff;
+            height: 96px;
+            border: 1px solid #414141;
+            background-color: transparent;
+            font-family: inherit;
+            box-sizing: border-box; /* Prevents overflow */
+        }
+
+        .form-container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+
+        .form-container .form-group input:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-group textarea:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-submit-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            align-self: flex-start;
+            font-family: inherit;
+            color: #717171;
+            font-weight: 600;
+            width: 40%;
+            background: #313131;
+            border: 1px solid #414141;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .form-container .form-submit-btn:hover {
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        /* Styling for output section */
+        #output {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            overflow-y: auto;
+            background-color: #212121;
+            color: white;
+            border: 1px solid #414141;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: pre-wrap; /* Ensures newlines are preserved */
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="playAudio" style="display: none;">
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+    <div class="form-container">
+        <h1>Spam NGL Link</h1>
+        <form class="form">
+            <div class="form-group">
+                <label for="username">Nhập Username:</label>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            
+            <div class="form-group">
+                <label for="content">Nhập Nội Dung:</label>
+                <input type="text" id="content" placeholder="Nội dung">
+            </div>
+            
+            <div class="form-group">
+                <label for="times">Nhập Số Lần Gửi:</label>
+                <input type="number" id="times" placeholder="Số lần">
+            </div>
+            
+            <button type="button" class="form-submit-btn" onclick="startSpam()">Bắt đầu gửi</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        alert("Admin Website By Rov!");
+        document.addEventListener("DOMContentLoaded", () => {
+            const audioElement = document.getElementById("playAudio");
+    
+            // Kiểm tra phần tử audio có tồn tại không
+            if (!audioElement) {
+                console.error("Không tìm thấy phần tử audio.");
+                return;
+            }
+    
+            // Danh sách các bài nhạc
+            const tracks = ["1.mp3", "2.mp3"];
+    
+            // Lựa chọn ngẫu nhiên bài nhạc
+            const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+            console.log("Bài nhạc được chọn:", randomTrack); // Debug để kiểm tra bài nhạc
+            audioElement.innerHTML = `<source src="${randomTrack}" type="audio/mp3">`;
+            audioElement.load(); // Tải lại audio với bài nhạc mới
+    
+            // Lắng nghe sự kiện click trên toàn bộ trang
+            document.addEventListener("click", function playMusic() {
+                // Phát nhạc
+                audioElement.play().then(() => {
+                    document.removeEventListener("click", playMusic);
+                }).catch(error => {
+                    console.error("Không thể phát nhạc:", error);
+                });
+            });
+        });
+        async function startSpam() {
+            const username = document.getElementById("username").value.trim();
+            const content = document.getElementById("content").value.trim();
+            const times = parseInt(document.getElementById("times").value.trim());
+            const output = document.getElementById("output");
+
+            if (!username || !content || isNaN(times) || times <= 0) {
+                output.textContent = "Vui lòng nhập đầy đủ thông tin và số lần gửi hợp lệ!";
+                return;
+            }
+
+            const url = "https://ngl.link/api/submit";
+            const headers = {
+                "Accept": "*/*",
+                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+                "Origin": "https://ngl.link",
+                "Referer": `https://ngl.link/${username}`
+            };
+
+            output.textContent = "Bắt đầu gửi...\n";
+
+            for (let i = 1; i <= times; i++) {
+                const data = new URLSearchParams({
+                    username: username,
+                    question: content.replace(/ /g, "+"),
+                    deviceId: crypto.randomUUID(),
+                    gameSlug: "",
+                    referrer: ""
+                });
+
+                try {
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: headers,
+                        body: data
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok && result.questionId) {
+                        output.textContent += `${i} | NỘI DUNG: ${content} | GỬI: ${username} | TRẠNG THÁI: THÀNH CÔNG\n`;
+                    } else if (response.status === 404 && response.statusText.includes("Could not find user")) {
+                        output.textContent += "Username Sai Hoặc Không Hợp Lệ!\n";
+                        break;
+                    } else {
+                        output.textContent += `${i} | TRẠNG THÁI: THẤT BẠI\n`;
+                    }
+                } catch (error) {
+                    output.textContent += `LỖI KHI GỬI LẦN ${i}\n`;
+                }
+            }
+
+            output.textContent += "Hoàn Thành!";
+        }
+    </script>
+</body>
+</html>
