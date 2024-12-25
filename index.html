@@ -35,11 +35,15 @@
             width: 80%;
             max-width: 800px;
             padding: 20px;
-            background-color: transparent; /* Màu nền trong suốt */
+            background-color: rgba(0, 0, 0, 0.5); /* Nền đen với độ trong suốt 50% */
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Viền trắng trong suốt */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng */
             z-index: 1; /* Đảm bảo nội dung nằm trên video */
+            color: white; /* Màu chữ trắng để dễ đọc trên nền đen */
+            text-align: center; /* Canh giữa nội dung */
         }
+
         
         /* GIF tiêu đề */
         .header-gif {
@@ -59,7 +63,7 @@
             font-size: 18px;
             margin-bottom: 10px;
             display: block;
-            color: #34495e;
+            color: #ffffff;
         }
 
         select {
@@ -69,6 +73,7 @@
             border-radius: 5px;
             border: 2px solid #3498db;
             background-color: transparent;
+            color: white;
             margin-bottom: 20px;
             box-sizing: border-box;
             transition: border-color 0.3s ease;
@@ -102,7 +107,7 @@
         
         #student-info p {
             font-size: 16px;
-            color: #2c3e50;
+            color: #ffffff;
             line-height: 1.6;
         }
         
@@ -148,7 +153,7 @@
     <div class="container">
         <img src="https://files.catbox.moe/z5ac9f.gif" alt="INFO 10D1" class="header-gif">
         <h1></h1>
-        <label for="student-select">Chọn Học Sinh:</label>
+        <label for="student-select">Chọn Học Sinh</label>
         <select id="student-select">
             <option value="">--Bấm Vào Đây Để Chọn Học Sinh--</option>
         </select>
