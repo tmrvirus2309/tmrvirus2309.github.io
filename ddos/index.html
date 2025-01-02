@@ -142,7 +142,7 @@
             const time_duration = document.getElementById("time").value;
             const method = document.getElementById("method").value;
 
-            const dataddos = new URLSearchParams({
+            const dataddos = {
                 key: API_KEY,
                 username: API_USERNAME,
                 password: PASSWORD,
@@ -150,15 +150,14 @@
                 port: port,
                 time: time_duration,
                 method: method
-            });
+            };
 
-            const urlWithParams = `${API_URL}?${dataddos.toString()}`;
-
-            fetch(urlWithParams, {
-                method: "GET",  // Use GET request method
+            fetch(API_URL, {
+                method: "POST",  // Change to POST if required by the API
                 headers: {
                     "Content-Type": "application/json"
                 },
+                body: JSON.stringify(dataddos), // Send data as JSON
             })
             .then(response => {
                 if (!response.ok) {
@@ -174,5 +173,6 @@
             });
         }
     </script>
+
 </body>
-  </html>
+</html>
